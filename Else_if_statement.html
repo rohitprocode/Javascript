@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Else-if Statement in JS</title>
+</head>
+<body>
+    <h1>Else-if Statement</h1>
+    <p>To show a multiway decision based on several condition we use else if statement.</p>
+    <h4>Syntax:</h4>
+    <p>
+        if(condition 1)
+        {
+            block of statement;
+        }
+        else if(condition 2)
+        {
+            block of statement;
+        }
+        else if(condition 3)
+        {
+            block of statement;
+        }
+        else
+        {
+            block of statement;
+        }
+    </p>
+    <h4>Example:</h4>
+    <script>
+        var a = prompt("Enter Roll NO:","101-125");
+        
+        if(a==108)
+        {
+            document.write("Pass with First Rank");
+        }
+        else if(a==115)
+        {
+            document.write("Pass with Second Rank");
+        }
+        else if(a==120)
+        {
+            document.write("Pass with Third Rank");
+        }
+        else if(a>125)
+        {
+            document.write("Please Enter Roll No between 101-125");
+        }
+        else
+        {
+            document.write("Pass");
+        }
+    </script>
+</body>
+</html>
