@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement in Javascript</title>
+</head>
+
+<body>
+    <h1>Switch statement in js</h1>
+    <p>Switch statement check several possible values for an expression.</p>
+    <h4>Syntax:</h4>
+    <p>switch(expression){
+        case 1:
+        block of statement;
+        break;
+
+        case 2:
+        block of statement;
+        break;
+
+        case 3:
+        block of statement;
+        break;
+
+        default:
+        block of statement;
+
+        }
+    <h4>Example:</h4>
+
+    <script>
+        // Use Number() if you want to enter numeric digit in input.
+        var passenger = Number(prompt("Enter Value"));
+
+        switch (passenger) {
+
+            case 1:
+                document.write("You need to book Bike Taxi");
+                break;
+
+            case 2:
+                document.write("You need to book Auto");
+                break;
+
+            case 3:
+                document.write("You need to book cab");
+                break;
+
+            case 4:
+                document.write("You need to book Van");
+                break;
+
+            default:
+                document.write("You need to book bus");
+        }
+    </script>
+
+    <h3>If you want to get same output for different cases, then:</h3>
+    <h4>Syntax:</h4>
+    <p>
+        if(expression){
+
+        case 1 :
+        block of statement;
+        break;
+
+        case 2 :
+        block of statement;
+        break;
+
+        case 3:
+        case 4:
+        block of statement;
+
+        case 5:
+        block of statement;
+        break;
+
+        default:
+        block of statement;
+
+        }
+    </p>
+
+    <h4>Example:</h4>
+    <script>
+        var a = prompt("Enter Your Name");
+
+        switch (a) {
+
+            case "Rohit":
+                document.write("First Rank");
+                break;
+
+            case "Mohit":
+                document.write("Second Rank");
+                break;
+
+            case "Ankit":
+            case "Shiwanshu":
+            case "Rohan":
+                document.write("Tie for third place");
+                break;
+            case "Anshul":
+                document.write("Fourth Rank");
+                break;
+
+            default:
+                document.write("Fail");
+
+        }
+    </script>
+
+    </p>
+
+</body>
+
+</html>
