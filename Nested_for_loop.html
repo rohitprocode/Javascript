@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested for loop</title>
+</head>
+<body>
+    <h1>Nested For loop</h1>
+    <h4>Syntax:</h4>
+    <p>
+        for(initialization; Test condition; Increment/Decrement){
+
+            block of statements;
+
+            for(initialization; Test Condition; Increment/Decrement){
+
+                block of statements;
+
+            }
+        }
+    </p>
+    <h4>Example: 1</h4>
+    <script>
+
+        for( i = 0; i < 4; i++){
+
+            document.write("This is Outer Loop " + i + "<br>");
+
+            for( a = 100; a < 107; a++){
+
+                document.write("This is Inside Loop " + a + "<br>");
+
+            }
+        }
+
+    </script>
+    <h4>Example: 2</h4>
+    <script>
+        
+        for(let b = 2019; b <= 2023; b++){
+            
+            document.write("Year: " + b + "<br />");
+
+            for( let c = 1; c <= 8; c++){
+                
+                document.write("Total Teams: " + c + "<br />");
+
+            }
+        }
+
+    </script>
+</body>
+</html>
