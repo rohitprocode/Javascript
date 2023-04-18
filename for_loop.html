@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop in javascript</title>
+</head>
+
+<body>
+    <h1>for loop()</h1>
+    <p>The for loop is frequently used, usually where the loop will be transversed a fixed numbers of times.</p>
+    <h4>Syntax: 1</h4>
+    <p>
+        for(initialization; test condition; Increment/Decrement)
+        {
+        block of statements;
+        }
+    </p>
+    <h4>Example:</h4>
+    <script>
+
+        for (i = 0; i < 7; i++) {
+            document.write(i + "<br>");
+        }
+
+        // After that code not execute, and next code will be executed if available.
+    </script>
+    <h4>Syntax: 2</h4>
+    <p>
+        Initialization;
+        for( ; test condition; Increment/Decrement ){
+        block of statements;
+        }
+    </p>
+    <h4>Example:</h4>
+    <script>
+        var i = 0;
+        for (; i < 7; i++) {
+            document.write(i + "<br>");
+        }
+
+        // After that code not execute, and next code will be executed if available.
+    </script>
+    <h4>Syntax: 3</h4>
+    <p>
+        Initialization;
+        for( ; Test Condition; ){
+        Increment/Decrement;
+        block of statements;
+        }
+    </p>
+    <h4>Example:</h4>
+    <script>
+        var i = 0;
+        for (; i < 7;) {
+            i++;
+            document.write(i + "<br>");
+        }
+
+        //After that code not execute, and next code will be executed if available.
+
+    </script>
+    <h4>Syntax: 4</h4>
+    <p>
+        Initialization;
+        for( ; Test Condition; ){
+        block of statements;
+        Increment/Decrement;
+        }
+    </p>
+    <h4>Example:</h4>
+    <script>
+        var i = 0;
+        for (; i < 7;) {
+            document.write(i + "<br>");
+            i++;
+        }
+
+        // After that code not execute, and next code will be excuted if available.
+
+    </script>
+    <h4>Syntax: 5</h4>
+    <p>
+        Initialization;
+        for( ; ; Increment/Decrement){
+            Test Condition;
+            block of statements;
+        }
+    </p>
+    <h4>Example: </h4>
+    <script>
+        var i = 0;
+        for( ; ; i++){
+            if( i == 4 ){
+                break;
+            }
+            document.write(i + "<br>");
+        }
+    </script>
+</body>
+
+</html>
