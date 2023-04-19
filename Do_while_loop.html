@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+</head>
+<body>
+    <h1>Do While Loop</h1>
+    <p>The do while loop is similar to while loop, but the condition is checked after the loop body is executed.This is ensure that the body is run at least once.</p>
+    <h4>Syntax: 1</h4>
+    <p>
+        Initialization;
+
+        do
+        {
+            body of code/block of statements;
+            Increment/Decrement;
+
+        }  while( Test Condition);
+    </p>
+    <h4>Example: </h4>
+    <script>
+
+        var a = 1;
+        do{
+            document.write("Value: " + a + "<br />");
+            a++;
+        }   while( a <= 10 );
+
+    </script>
+    <h4>Syntax: 2</h4>
+    <P>
+        Initialization;
+
+        do
+        {
+
+            if(Test Condition)
+            {
+
+                body of code / block of statements;
+
+                Increment / Decrement;
+
+            }
+
+        }   while( true / false);
+    </P>
+    <h4>Example: </h4>
+    <script>
+
+        var i = 1;
+
+        do
+        {
+
+            if( i == 13 ){
+
+                break;
+            }
+
+            document.write("Digit: " + i + "<br />");
+
+            i++;
+
+        }   while(true);
+    </script>
+</body>
+</html>
