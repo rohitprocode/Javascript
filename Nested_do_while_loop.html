@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Do-while loop</title>
+</head>
+
+<body>
+
+    <h1>Nested Do-while loop</h1>
+    <p>Do while loop inside do while loop</p>
+    <h4>Syntax: </h4>
+    <p>
+        Initialization;
+        do
+        {
+
+        block of statements;
+        Increment/Decrement;
+
+        Initialization;
+
+        do
+        {
+
+        block of statements;
+        Increment/Decrement;
+
+        } while ( Test Condition );
+        } while ( Test Condition );
+    </p>
+    <h4>Example: </h4>
+    <script>
+
+        var i = 0;
+        do{
+
+            document.write("Outer Loop" + i + "<br />");
+            i++;
+
+            var j = 0;
+
+            do{
+
+                document.write("Inner Loop" + j + "<br />");
+                j++;
+
+            }   while ( j < 6 );
+        }   while ( i<= 3);
+    </script>
+</body>
+
+</html>
