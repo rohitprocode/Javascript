@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How function call works</title>
+</head>
+<body>
+    <h1>How function call works</h1>
+    <h4>Example: 1</h4>
+    <script>
+        document.write("First Line <br/>");
+        document.write("Rohit Shows <br/>");
+        function display(){
+            document.write("Calm Down , Calm Down <br/>");
+        }
+        document.write("Last Line <br/>");
+        display();
+    </script>
+    <h4>Example: 2</h4>
+    <script>
+        document.write("First Line <br/>");
+        displayA();
+        document.write("Rohit Shows <br/>");
+        function displayA(){
+            document.write("Baby Calm Down , calm down <br/>");
+        }
+        document.write("Last Line <br/>");
+    </script>
+</body>
+</html>
