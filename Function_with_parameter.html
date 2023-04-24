@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function With Parameter</title>
+</head>
+<body>
+    <h1>Function With Parameter</h1>
+    <h4>Syntax:</h4>
+    <p>function function_name(parameter1, parameter2)
+        {
+            body of statement/block of code
+        }
+    </p>
+    <h4>Example:</h4>
+    <script>
+        function display(name)
+        {
+            document.write(name);
+        }
+    </script>
+    <h3>Rules:</h3>    
+    <p>Javascript function definitions do not specify data types for parameters.</p>
+    <p>Javascript function do not perform type checking on the passed agruments.</p>
+    <p>Javascript function do not check the number of arguments received.</p>
+
+    <h2>Call function with Parameter</h2>
+    <h4>Syntax:</h4>
+    <p>function_name(parameter1, parameter2);</p>
+    <h4>Example: </h4>
+        <script>
+            display("Rohitshows " , 22);
+        </script>
+        <h4>Output : Rohitshows </h4>
+    <h4>Example:2 </h4>
+    <script>
+        function AWM( display1 , display2)
+        {
+            
+            document.write(display1 + " to " + display2);
+
+        }
+        AWM("Welcome", "Goa" , " With " , 5 , " Star Bus ");
+    </script>
+    <h4>Output: Welcome to Goa</h4>
+
+    <h3>You should know:</h3>
+    <p>We get "Welcome to Goa" because display1 = "Welcome" and display2 = "Goa" after that concetenate display 1 + " to " + display2 then, Welcome to Goa. Rest of the data like "with" , 5 , "Star bus" are ignored by the function because we have only two Parameters. </p>
+</body>
+</html>
