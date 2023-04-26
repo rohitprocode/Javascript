@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arguments Missing</title>
+</head>
+<body>
+    <h1>Function Arguments Missing</h1>
+<p>If a function is called with missing arguments, the missing values are set to undefined.</p>
+<h4>Example:1</h4>
+<script>
+    function add( a,b,c )
+    {
+        document.write("A: " + a + " B: " + b + " C: " + c);
+    }
+    add(10,20,30);
+</script>
+<h4>Example: 2</h4>
+<script>
+    function add( a, b, c){
+        document.write("A: " + a + " B: " + b + " C: " + c);
+    }
+    add(11, 50);
+</script>
+<p>*We do not call value of 'c' then we get undefined as a missing arguments.</p>
+<p>if i call add() then,</p>
+<p>A = undefined, B = Undefined , C = Undefined</p>
+<p> If i call add(10); then, </p>
+<p>
+    A = 10; B = undefined , C = Undefined
+</p>
+    
+</body>
+</html>
