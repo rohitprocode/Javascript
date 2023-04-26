@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rest Parameter vs Argument Object</title>
+</head>
+<body>
+    <h1>Rest Parameter vs Argument Object</h1>
+    <strong>
+        <p>
+            Rest parameter are only the ones that haven't been given a separate name, while the arguments object contains all arguments passed to the function.
+        </p>
+        <p>
+            The argument object is not a real array , while rest parameters are array instances, meaning methods like sort, map , forEach or pop can be applied on it directly.
+        </p>
+        <p>
+            The arguments object has addition funcitonality specific to itself ( like the callee property ).
+        </p>
+    </strong>
+    <h4>Example: 1</h4>
+    <script>
+        //Rest Parameters
+
+        function restshow(a , ...args){
+            console.log( "A : " + a);
+            console.log( args );
+        }
+        restshow(10,20,30,40,50);
+
+        //Arguments Object
+
+        function show(a){
+            console.log( " A : " + a);
+            console.log( arguments );
+        }
+        show(10,20,30,40,50);
+
+    </script>
+</body>
+</html>
