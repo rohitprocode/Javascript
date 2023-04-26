@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arguments Objects </title>
+</head>
+<body>
+    <h1>Arguments Objects</h1>
+    <p>
+         A arguments objects contains an array of the arguments used when the function was called.
+    </p>
+    <p>This object contains an entry for each arguments passed to the function, the first entry's index starting at 0.The argument object is not an array. It is similar to an array, but does not have any Array properties except length.</p>
+
+    <h4>Example: 1</h4>
+    <script>
+        function add (num1,num2)
+        {
+            // arguments[0] = num1
+            //num1 = 10
+            // arguments[1] = num2
+            //num2 = 20
+            document.write(num1 + " " + num2);
+        }
+        add ("Television" , "Mobile");
+    </script>
+<h4>Example : 2</h4>
+<script>
+    function disp(name)
+    {
+        //document.write(name);
+        document.write(arguments[0]);
+    }
+    disp("Rohit");
+</script>
+<h4>Example : 3</h4>
+<script>
+    function disp ( name1, name2 )
+    {
+        //document.write(name1);
+        //document.write(name2);
+        document.write(arguments[0]);
+        document.write(arguments[1]);
+    }
+    disp("Rohit ", 22);
+</script>
+<h4>Example : 4</h4>
+<script>
+    function disp( name1 , name2 )
+    {
+        arguments[0]= "Bhopal ";
+        document.write(arguments[0] + arguments[1]);
+    }
+
+    disp("Indore ", "Madhya Pradesh");
+</script>
+<h2>Arguments.length</h2>
+<p>The Arguments.length property provides a number of arguments actually passed to a function.This cannot count the numbers of parameters passed. This can be more or less than the designed parameters count.</p>
+<h4>Example: 1</h4>
+<script>
+    function disp( a, b, c )
+    {
+        document.write(arguments.length);
+    }
+    disp("Rohit" , " Mohit" , " Rathore", " Indore");
+</script>
+<h4>Example: 2</h4>
+<script>
+    function add ()
+    {
+        document.write(arguments.length);
+    }
+    add( 1 , 5 , "Rohit" , "Rathore" , 8,  9);
+</script>
+<h4>Example: 3</h4>
+<script>
+    function disp(a,b,v,c)
+    {
+        for( var i = 0; i < arguments.length; i++ )
+        {
+            document.write(arguments[i] + "<br>");
+        }
+    }
+    disp( 10 , 20, "Rohit" , "Geekyshows" , "Indore" , "Madhya Pradesh");
+</script>
+<h2>Arguments.callee</h2>
+<script>
+    function disp ( name1 , num , name2 )
+    {
+        document.write(arguments.callee);
+    }
+    disp(1,2,3,4,5,6,7,8);
+</script>
+</body>
+</html>
