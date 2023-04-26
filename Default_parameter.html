@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+
+<body>
+    <h1>Default Parameter</h1>
+    <p>The default parameter is a way to set default values for function parameters a value is no passed in.(ie. it is
+        undefined)</p>
+    <p>In a function, If a parameter is not provided, then its value becomes undefined. In this case the default value
+        that we specify is applied by the compiler. </p>
+    <h4>Syntax : 1</h4>
+    <p>
+        function function_name( para1 , para2 , para3 = "value"){
+        block of statements / block of code
+        }
+    </p>
+    <h4>Syntax : 2 // This Problem is undefined</h4>
+    <p>function function_name( para1 , para2 = "Value" , para3)
+        {
+        block of statements/block of code
+        }
+    </p>
+    <p>The default value can be written only at the end of the parameter.</p>
+
+    <h4>Syntax: 3 This condition is true.</h4>
+    <p>function function_name(para1 , para2 = "Value1" , para3 = "Value2)</p>
+    <p>{
+        block of statements/block of code
+        }
+    </p>
+    <h4>Example : 1</h4>
+    <script>
+        function newprog(a, b, c = 40) {
+            document.write(a, b, c);
+        }
+        newprog("Rohit ", " Indore ");
+        newprog("<br>" + 10, 20);
+        newprog("<br> " + 10, 20, 150);
+    </script>
+
+    <h3>What happened if we write default value before end?</h3>
+    <h4>Example: 2</h4>
+    <script>
+        function advertise(x, y = 5, z) {
+            document.write(" X = " + x + " Y = " + y + " Z = " + z + "<br>");
+        }
+        advertise(10, 20, 30);
+        advertise(10);
+        advertise();
+        advertise(10, 20);
+    </script>
+    <h3>Default Parameter as a Null</h3>
+    <p>Javascript also allows the use of arrays and null as a default values. null is a case sensitive.</p>
+    <h4>Example : 3</h4>
+    <script>
+        function fish(a, b, c = null) {
+            document.write(a, b, c + "<br>");
+        }
+        fish(55, 40, 88);
+        fish(40, 50);
+        fish(46);
+        fish();
+    </script>
+    <h4>Example : 4</h4>
+    <script>
+        function add(a = [101]) {
+            document.write("Value of A " + a[0] + "<br> ");
+        }
+        add();
+        add([10]);
+
+    </script>
+    <h4>Example : 5</h4>
+    <script>
+        function add(f, a = [101]) {
+            document.write(f + "Value of A " + a[0]);
+        }
+        add("Indore " , [1200]);
+
+    </script>
+    <h4>Example : 6</h4>
+    <script>
+        function add( name1 , v = ["Ro","HI"])
+        {
+            //document.write( name1 + "<br>" + v[0] , v[1] );
+            document.write( name1 + "<br>" + v);
+        }
+        add( 990797 , ["Indore ", " Madhya Pradesh"]);
+    </script>
+</body>
+
+</html>
