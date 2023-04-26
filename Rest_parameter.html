@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rest Parameter </title>
+</head>
+<body>
+    <h1>Rest Parameter</h1>
+    <p>The Rest parameter allows to represent an infinite number of arguments as an array.</p>
+    <h4><strong>The Rest operator must be the last parameter to a function.</strong></h4>
+    <h4>Syntax: 1</h4>
+    <p>
+        function function_name(...args)
+        {
+            block of statements / body of code
+        }
+    </p>
+    <h4>Syntax: 2</h4>
+    <p>
+        function function_name(a , ...args)
+        {
+            block of statements / body of code
+        }
+    </p>
+    <h4>Example: 1</h4>
+    <script>
+        function show(...args){
+            document.write(args);
+        }
+        show(86 , 84 , " Rohit " + " Rathore ");
+    </script>
+    <h4>Example: 2</h4>
+    <script>
+        function show( a , ...args){
+            document.write(a , args);
+        }
+        show("Indore " , 85 , " India ");
+    </script>
+    <h4>Example: 3</h4>
+    <script>
+        function show(a,...args,b){
+            document.write(a , args , b);
+        }
+        show(500 , 4565 , "iit");
+    </script>
+    <h4>Output : In the console we get Syntax Error</h4>
+    <p><strong>Rest parameter is written only at last parameter</strong></p>
+    <h4>Example: 4</h4>
+    <p>You can individually access values with index numbers.</p>
+    <script>
+        function show( a , ...args){
+            document.write(a , args[0] + " " + args[2]);
+        }
+        show( "variable " , "output " , "Laptop " , " Headphone " , " Android");
+    </script>
+</body>
+</html>
