@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Too Many Function Arguments</title>
+</head>
+<body>
+<h1>Too Many Function Arguments</h1>    
+    <h4>Example: 1</h4>
+<script>
+
+        function getset( a , b )
+        {
+
+            document.write( " A: " + a + " B: " + b );
+            document.write( " C: " + arguments[2] + " D: " + arguments[3]);
+
+        }
+
+        getset("Rohit ", 452010 , " Indore " , 4520110);
+</script>
+    
+<h4>Example: 2</h4>
+<script>
+
+    function add( a, b )
+    {
+        document.write( " A : " + a + " B : " + b + " C : " + arguments[2] + " D : " + arguments[3]);
+    }
+    add( 55, 88 , 79 , 59);
+</script>
+</body>
+</html>
