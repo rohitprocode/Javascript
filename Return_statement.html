@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Statement</title>
+</head>
+<body>
+    <h1>Return Statement</h1>
+    <p>A Return Statement may return any type of data, including arrays and objects.
+        The return statements stop the execution of a function and returns a value.
+    </p>
+    <h4> Syntax: 1</h4>
+    <p>
+            return( Variable or expression );
+    </p>
+    <h4>Example: 1</h4>
+    <p>
+        return(3);
+        return(a+b);
+        return(a);
+    </p>
+    <h4>Syntax : 2</h4>
+    <p>
+        function function_name(para1 , para2 , ....)
+        {
+            block of statements / body of code;
+            return( variable / expression / array / object );
+        }
+        function_name();
+    </p>
+    <h4>Example: 2</h4>
+    <script>
+        function add( a, b )
+        {
+            return(a + b);
+        }
+        add(10,20); //We get 30 as a output but we can not able to see it. for Return method.
+        /*var x = add(10,20);
+        document.write(x);*/
+        //document.write(add(10,20));
+    </script>
+</body>
+</html>
