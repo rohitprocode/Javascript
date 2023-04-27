@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope</title>
+</head>
+
+<body>
+    <h1>Variable Scope</h1>
+    <strong>
+        <h2>Global Scope / Global Variable</h2>
+        <p> A variable that is declared outside a function definition is a global variable, and its value is accessible
+            and modifiable throught your program.</p>
+        <p>In a web browser, Global variables are deleted when you close the browser window ( or tab ), but remain
+            available to new pages loaded into the same window.</p>
+        <p>
+            //If we initialize a value outside a function then it is called as global variable.
+            <br>
+            //If we intialize a value inside a function then it is called as local variable.
+            <br>
+            //But, If we initialize a value inside a function a function without " var " then it is also called as
+            global variable.
+        </p>
+    </strong>
+    <h4>Syntax : 1</h4>
+    <p>
+    <pre>
+        Initialization;
+        function function_name(){
+            block of statements ;               //Global Variable
+        }
+        function_name();
+    </pre>
+    </p>
+    <h4>Example: 1</h4>
+    <script>
+        var i = " I am a global variable";
+        //Global Variable 
+        //Accessible from anywhere
+
+        function show() {
+            document.write(i + "<br/>");       //Inside Function
+        }
+        show();
+        document.write(i + "<br/>");           //Outside Function
+    </script>
+    <h4>Example: 4</h4>
+    <script>
+
+        var a = "I am a global variable";
+
+        function add(apple, mango) {
+            document.write("A = " + a + " " + apple + " " + mango + "<br/>");       //Inside Function
+        }
+        add(400, 200);
+        document.write("A = " + a + "<br/>");
+
+        function disp() {
+            document.write("A = " + a + "<br/>");
+        }
+        disp();
+
+        if (true) {
+            document.write("A = " + a + "<br/>");
+        }
+    </script>
+    <h2>Local Scope / Local Variable</h2>
+    <strong>
+        <p>A variable that is decalared inside a function definition is local.It is created and destroyed everytime the
+            function is executed, and it cannot be accessed by any code outside the function.Inside a function, if a
+            variable has not been declared with " var " it is created / treated as a global variable.</p>
+    </strong>
+    <h4>Syntax: 1</h4>
+    <p>
+    <pre>
+        function function_name(){
+            Initialization;         //Initialize using var   //Local variable
+            block of statements;
+        }
+        function_name();
+    </pre>
+    </p>
+    <h4>Example : 1</h4>
+    <script>
+        function add() {
+            var c = " I am a local variable";
+            //Local Variable 
+            //Accessible only inside function
+            document.write(c + "<br/>");
+        }
+        add();
+        document.write(c + "<br/>");        //Outside Function
+    </script>
+    <h4>Example: 2</h4>
+    <script>
+        function add(apple, mango) {
+
+            var x = "I am a local variable";   //With var it is local variable
+            m = "I am a global variable";  //Without var it is a global variable
+
+
+            document.write("X = " + x + " M = " + m + " " + apple + " " + mango + "<br/>");
+            //Inside Function
+        }
+        add(400, 200);
+        document.write("M = " + m + "<br/>"); //Outside function
+
+        //It shows an reference error in the console " x is not defined"
+        //document.write("X = " + x + "<br/>"); //Outside function
+
+         function displ() {
+            document.write("M = " + m + "<br/> "); //inside another function
+        }
+        displ();
+        
+        //It shows an reference error in the console " x is not defined"
+        // function dis() {
+        //     document.write("X = " + x + "<br/>"); //Inside another function
+        // }
+        // dis();
+
+        if (true) {
+            document.write("M = " + m + "<br/> ");  //Inside block
+        }
+
+        //It shows an reference error in the console " x is not defined"
+        // if (true) {
+        //     document.write("X = " + x + "<br/>"); //Inside block
+        // }
+    </script>
+
+    <strong>
+        <p>//Without var is a global variable</p>
+        <p>With var inside is a local variable</p>
+        <p>Global variable accessible from anywhere</p>
+        <p>Local variable accessible only inside function where var is declared</p>
+    </strong>
+    <p>
+        If there is function inside a function then the inner function can access outer function's variable but outer function cannot access inner function's variables
+    </p>
+    <p>
+        Function arguments (parameters) work as local variables inside functions.
+    </p>
+    <h4>Example: 3</h4>
+    <script>
+        function show(){
+            var j  = "J is a local variable of outer function";
+            document.write( j + "<br/>");
+
+            function innerfun(){
+                var k = "K is a local variable inside function";
+                document.write( k + "<br/>");
+
+            }
+            innerfun();
+        }
+        show();
+    </script>
+    <h4>Example : 4     //Inner function can access outer function's variables</h4>
+    <script>
+
+        function showa(){
+            var jj = " JJ is a local variable of outer function";
+            document.write(jj + "<br/>");
+
+            function innerfunn(){
+
+                var kk = "KK is a local variable of inner function";
+                document.write(kk + "<br/>");
+                document.write(jj + "<br/>");   
+            }
+            innerfunn();
+
+        }
+        showa();
+
+    </script>
+    <h4>Example : 5 //Outer function can not access inner function's variables</h4>
+    <script>
+        function showw(){
+            var jjj =  " JJJ is a local variable of outer function";
+            document.write(jjj + "<br/>");
+            document.write(kkk + "<br/>");
+            
+            function innerfunnn(){
+                var kkk = "KKK is a local variable of inner function";
+                document.write(kkk + "<br/>");
+            }
+            innerfunnn();
+        }
+        showw();
+    </script>
+
+</body>
+
+</html>
