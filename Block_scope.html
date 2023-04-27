@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope</title>
+</head>
+<body>
+    <h1>Block Scope</h1>
+    <strong>
+        <p>
+            A block scope is the area within if, switch conditions or for and while loops.Generally speaking, whereever you see { curly brackets }, it is a block. In ES6, const and let keywords allow developers to declare variables in the block scope, which means those variables exist only within the corresponding block.
+        </p>
+        <p>
+            //The block scope of a variable means that the variable is accessible within the block that is between the curly braces.
+        </p>
+        <p>
+            Summary.As a general rule, you should always declare variables with const, if you realize that the value of the variable needs to change, go back and change it to let.Use let when you know that the value of a variable will change.Use const for every other variable.
+        </p>
+    </strong>
+    <h4>Example: 1   //Block Scope</h4>
+    <script>
+        if(true)
+        {
+            var i = 10;
+            document.write(i);
+        }
+        
+    </script>
+    <h5>//We think that "var i = 10" is a local variable / local scope but actually it is a global scope.</h5>
+
+    <h4>Example: 2</h4>
+
+    <script>
+        if(true){
+            var i = 10;
+            document.write( i + "<br/>");
+        }
+        document.write( i + "<br/>");
+    </script>
+    <h5>We get 10 in second output that is wrong.</h5>
+    <strong><p>
+        In ES6,we get two new keywords "let" or "const".We should use let or const instead or var.Instead of var.It is a block scope keywords.
+    </p></strong>
+    <h4>Example : 3</h4>
+    <script>
+        if(true){
+            let a = 10;
+            document.write( a + "<br/>");
+        }
+        document.write(a + "<br/>"); //we get reference error: a is not defined
+    </script>
+
+    
+
+    
+</body>
+</html>
