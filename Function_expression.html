@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Expression in Javscript</title>
+</head>
+<body>
+    <h1>Function Expression in Javascript</h1>
+    <strong>
+        <p>
+            When we create a function and assign it to variable, known as function Expression.
+        </p>
+    </strong>
+    <h4>Example: 1</h4>
+    <script>
+        //Function Declaration
+
+        function show(){
+            document.write("Rohit Shows");
+        }
+        show();
+
+        //Function Expression
+
+        var display = function shows(){
+            document.write(" <br/> Rohit Rathore");
+        }
+        display();
+    </script>
+    <strong><p>
+        You can not call function Expression before function definition.
+    </p>
+    <p>
+        Function Expression is Javascript are not hoisted,unlike function declaration.
+    </p>
+    <pre>
+        myfun();
+        myfun = function show(){
+            document.write("Rohit Shows");
+        }
+    </pre>
+    <p>//This is a <mark>wrong</mark> method in function Expression because we can not call function Expression before function definition.</p>
+</strong>
+</body>
+</html>
