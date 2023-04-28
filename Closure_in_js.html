@@ -47,10 +47,18 @@
             document.write(j + "<br/>");
         }
         innerfun();
-        document.write(k + "<br/>");
+        document.write(k + "<br/>"); //In this line we get an error: k is not defined.
     }
     shows();
 </script>
+<strong>
+    <p>
+        Inner function can access outer function.
+    </p>
+    <p>
+        Outer function can not access inner function.
+    </p>
+</strong>
     
 </body>
 </html>
