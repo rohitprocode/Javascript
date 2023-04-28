@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Hoisting</title>
+</head>
+<body>
+    <h1>Variable Hoisting</h1>
+    <strong>
+        <p>
+            Hoisting is Javascript's default behaviour of moving declaration to the top of the function, if defined in a function,or top of the global context, if outside a function.
+        </p>
+        <p>Hoisting is a javascript mechanism where variables and funtions declarations are moved to the top of their scope before code execution.<br>
+            Inevitably,this means that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.
+        </p>
+        <p>
+            var a : Variable declaration
+        </p>
+        <p>
+            a = 10: Variable Initialization
+        </p>
+        <p>
+            If we write var a = 10; //Javascript divide this statement to two parts.
+        </p>
+        <p>var a : Declaration</p>
+        <p>a = 10 : Initialization</p>
+        <p>Javascript moved declaration part to the top of the code if declared inside the code or top of the function code if declared inside a function.</p>
+        <p>
+            Only Declaration part moves not Initialization.
+        </p>
+    </strong>
+    <h4>Example: 1</h4>
+    <script>
+        //What i write
+
+        var a = 10;
+        document.write( a + "<br/>");
+        var b = 20;
+
+        //What JS understand     //Compile Phase
+        var a;
+        var b;
+        a = 10;
+        document.write(a + "<br/>");
+        b = 20;
+    </script>
+
+    <strong><p>
+        A variable can be used before it has been declared.
+    </p>
+    <p>
+        Only variable declarations are hoisted to the top, not variable Initialization.
+    </p>
+</strong>
+<h4>Example: 2</h4>
+<script>
+    //What i write
+
+    a = 10;
+    document.write(a + "<br/>");
+    var a;
+
+    //What JS Understand
+
+    var a ;
+    a = 10;
+    document.write( a + "<br/>"); 
+</script>
+<h4>Example : 3</h4>
+<script>
+    //What i write
+
+    var n = 10;
+    document.write(n + " " + c + "<br/>");
+    var c = 20;
+</script>
+<script>
+    //What JS Understand // I change variable name for get output properly
+
+    var k;
+    var l;
+    k = 10;
+    document.write( k + " " + l + "<br/>");
+    l = 20;
+</script>
+<h4>Example : 4</h4>
+<script>
+    var q = 10;
+    document.write(q + " " + w);  //w is a undefined
+    w = 20;
+    document.write( q + " " + w);
+</script>
+<strong><p>
+    It is a good practice to declare variables at the top.
+</p></strong>
+<h4>Example 5:</h4>
+<script>
+    //What i Write
+
+    var i = "Hello";
+    document.write(i + "<br/>");
+    function show(){
+        document.write( i + "<br/>");
+    }
+    show();
+
+    //What JS Understand
+
+    var  i;
+    i = "Hello";
+    document.write(i + "<br/>");
+    function show(){
+        document.write( i + "<br/>");
+    }
+    show();
+</script>
+<h4>Example : 6</h4>
+<script>
+    //What I Write
+    var r  = "Hello";
+    document.write(r + "<br/>");
+    function show (){
+        document.write( r + "<br/>");
+        var r = "Rohit Shows";
+    }
+    show();
+
+    //What JS understand
+
+    var r;
+    r = "Hello";
+    document.write(r + "<br/>");
+    function show(){
+        var r;
+        document.write(r + "<br/>");
+        r = "Rohit Shows";
+    }
+    show()
+</script>
+<h4>Example : 7</h4>
+<script>
+    //What i write
+    var e = "Hello";
+    document.write(e + "<br/>");
+    function show(){
+        document.write(e + "<br/>");
+        var e = "Rohit Shows";
+        document.write( e + "<br/");
+    }
+    show();
+
+    //What JS Understand
+
+    var e;
+    e = "Hello";
+    document.write( e + "<br/>");
+    function show(){
+        var e;
+        document.write(e + "<br/>");
+        e = "Rohit Shows";
+        document.write(e + "<br/>");
+    }
+    show();
+</script>
+    
+</body>
+</html>
