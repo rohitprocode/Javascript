@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning Anonymous Function in Js</title>
+</head>
+<h1>Returning anonymous function in js</h1>
+<body>
+    <h4>Example: 1  // Returning String </h4>
+    <script>
+        function cat(food){
+            return "Fish";
+        }
+        document.write(cat());
+    </script>
+    <h4>Example: 2 Returning Anonymous Function</h4>
+    <script>
+        function dog (food){
+            return function (Drink){
+                return food + Drink;
+            }
+        }
+        document.write(dog("Biscuit")(" Milk"));
+    </script>
+    <h4>Example: 3</h4>
+    <script>
+        function disp(a){
+            return function(b){
+                return a + b;
+            }
+        }
+        var af = (disp(10));
+        document.write(af(30));
+    </script>
+</body>
+</html>
