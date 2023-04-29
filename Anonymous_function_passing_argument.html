@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function passing as Argument</title>
+</head>
+<h1>Anonymous Function Passing as Argument</h1>
+
+<body>
+    <h4>Syntax: 1</h4>
+    <pre>
+        function function_name(parameter){
+            return parameter_name();            //Remember, use () because we want to call Anonymous function here.
+        }
+        document.write(function_name(function(){
+            return block of statement / body of code 
+        }));
+
+        Example:- 
+
+         function disp(myfun){
+             return myfun();                         //We use () because We get output from function (anonymous function)
+        }
+        document.write(disp(function(){
+            return "Rohit Shows";
+        }));
+    </pre>
+    <h4>Example: 1  //Passing String as Argument</h4>
+
+    <script>
+        function a(myfun){
+            return myfun;
+        }
+        document.write(a("Rohit"));
+
+    </script>
+    <h4>Example : 2</h4>
+    <script>
+        function disp(myfun){
+            return myfun;
+        }
+        document.write(disp("Shows"));
+    </script>
+    <h4>Example : 3 Passing Anonymous Function as Argument</h4>
+    <script>
+        //Argument में ऐसा Function पास करना है जिसका कोई नाम नहीं है|
+        
+        function cat(food){
+                return food;
+        }
+        document.write(cat(function(){
+            return "Fish"
+        }));
+    </script>
+    <h4>Example: 4</h4>
+    <script>
+        function dog(food) {
+            return food();
+        }
+        document.write(dog(function () {
+            return "Biscuit";
+        }));
+    </script>
+
+</body>
+
+</html>
