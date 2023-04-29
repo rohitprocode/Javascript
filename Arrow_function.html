@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function in Js</title>
+</head>
+<h1>Arrow Function in Javascript</h1>
+<body>
+    <strong><p>
+        An Arrow function expression (previously and now incorrectly known as fat arrow function) has a shorter syntax as compared to function expression.Arrow functions are always anonymous function.
+        <br>
+        //Shorter <br>
+        //Always anonymous
+    </p></strong>
+    <h4>Syntax:-</h4>
+    <pre>
+        () => { block of statements / body of code };
+
+        //Comparison with another function              
+
+        //Another Function (Function Expression)
+        var myfun = function show(){
+            document.write("Rohit Shows");
+        }
+        myfun();          
+
+        //Arrow Function
+
+        var myfun = () => {document.write("Rohit Shows");};
+        myfun();
+    </pre>
+    <h4>Example: 1</h4>
+    <script>
+        //Function Declaration
+
+        var myfun1 = function show(){
+            document.write("Rohit Shows <br/>");
+        }
+        myfun1();
+
+        //Anonymous function
+
+        var myfun2 = function(){
+            document.write("Rohit Rathore <br/>");
+        }
+        myfun2();
+
+        //Arrow Function
+
+        var myfun3 = () => {document.write("Rohit Shows <br/>");};
+        myfun3();
+
+        //We never call arrow function before function definition.
+        //We never break line between parentheses () and => arrow.
+    </script>
+    <h4>Example: 2</h4>
+    <script>
+        //Arrow Function With Parameter
+
+        var myfun4 = (a) => {
+            document.write(a);
+        }
+        myfun4("Rohit Rathore <br/>");
+
+        // Parentheses() is optional in the case of if we have only one parameter.
+
+        //Like:-
+
+        var myfun5 = a => {
+            document.write("Rohit Shows <br/>");
+        }
+        myfun5();
+
+        //If we have two or more parameter then it is compulsory to use paraentheses ().
+
+        //Like:-
+
+        var myfun6 = (a,b) => {
+            document.write("A= " + a + " B= " + b + "<br/>");
+        }
+        myfun6( "Rohit Rathore ", "Javascript" );
+    </script>
+    <h4>Example: 3</h4>
+    <script>
+        //Arrow Function with default parameter
+
+        var myfun7 = (a,b=122) => {
+            document.write("A= " + a + " B= " + b + " A + B = " + (a + b) + "<br/>");
+        }
+        myfun7(28);
+    </script>
+    <h4>Example: 4</h4>
+    <script>
+        //Arrow Function with Rest Parameter
+
+        var myfun8 = ( a , ...args) => {
+            document.write( " A = " + a + " Args/Rest = " + args + "<br/>");
+        } 
+        myfun8(10,20,30,40,50,60,70,80,90,100);
+    </script>
+    <h4>Example : 5</h4>
+    <script>
+        //In arrow function, Curly brackets { } are optional if we write block of statements / body of code in a single line without line break;
+
+        //Like:-
+
+        var myfun9 = () => document.write("Rohit Shows <br/>");
+        myfun9();
+    </script>
+    <h4>Example : 6</h4>
+    <script>
+        //You can skip "return" keyword in arrow function but with some restrictions.
+
+        //Like:-
+
+        var myfun10 = c => {return c;};
+        document.write(myfun10("Rohit Rathore<br/>"));                       //Work
+
+        var myfun11 = d => d;
+        document.write(myfun11("Rohit Shows <br/>"));                       //Work
+
+        var myfun12 = (c,d) => c + d;
+        document.write(myfun12( 55,45) + "<br/>");                          //Work
+
+        //Never use curly brackets { } without "return" keyword.
+
+        var myfun13 = x => {x};
+        document.write(myfun13(5) + "<br/>");                         //Not Work
+
+        var myfun14 = y => {return y};
+        document.write(myfun14(10) + "<br/>");                         //Work
+
+        var myfun15 = (c , d) => {c + d};
+        document.write(myfun15(5 , 5) + "<br/>");                               //Not Work
+
+        var myfun16 = ( c, d) => {return c + d };
+        document.write(myfun16(45,155) + "<br/>");
+
+    </script>
+    <h4>Example : 7</h4>
+    <script>
+        //Comparison With Function Declaration
+
+        //Function Declaration
+
+        function show( a ,b ){
+            return a + b;
+        }
+        document.write (show(10 , 20) + "<br/>");
+
+        //Arrow Function
+
+        (j,k) => j+k;
+    
+
+    </script>
+</body>
+</html>
