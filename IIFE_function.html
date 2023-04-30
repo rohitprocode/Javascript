@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE Function</title>
+</head>
+<h1>
+    IIFE (Immediately Invoked Function Expression)
+</h1>
+
+<body>
+    <strong>
+        <p>
+            IIFE (Immediately Invoked Function Expression) is a javascript function that runs as soon as it is defined.
+        </p>
+        <p>
+            It is a design pattern which is also known as self-executing anonymous function and contains two major
+            parts. The first is the anonymous function with loxical scope enclosed within the Grouping Operator().This
+            prevents accessing variables within the IIFE idiom as well as polluting the global scope.
+        </p>
+        <p>
+            The second part is creating the Immediately executing function expression(), through which the javascript
+            engine will directly interpret the function.
+        </p>
+    </strong>
+    <h4>Syntax:
+        <pre>
+        (function () { block of statements ;})();
+    </pre>
+    </h4>
+    <h4>Example : 1</h4>
+    <script>
+        (function () { document.write("Hello <br/>"); })();
+
+        //With parameter
+
+        (function (a, b) { document.write(a + " " + b); })(10, 20);
+    </script>
+    <strong>
+        <p>Points to Remember:-</p>
+        <p>1.Avoid creating global variables and functions.</p>
+        <p>As it doesn't define variables and functions globally.So there will be no name conflicts.</p>
+        <p>Scope is limited to that particular function.</p>
+    </strong>
+    <h4>Example: 2</h4>
+    <script>
+        //Anonymous Function
+      var a = function(){ document.write("Rohit Shows <br/>"); }
+      a();
+
+      //IIFE function
+      (function () {document.write("Rohit Rathore <br/>");})();
+
+            //With Parameter
+
+            (function (a,b) {document.write(a + b);})(50,50);
+    </script>
+
+</body>
+
+</html>
