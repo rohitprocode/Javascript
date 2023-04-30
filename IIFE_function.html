@@ -58,6 +58,17 @@
 
             (function (a,b) {document.write(a + b);})(50,50);
     </script>
+    <h4>Example: 3</h4>
+    <script>
+        //We can not access iife variable outside iife variable
+        //Like:-
+
+        (function(a,b) {
+            c = +5;
+            document.write(a + b + c);
+        })(50,55);
+        
+    </script>
 
 </body>
 
