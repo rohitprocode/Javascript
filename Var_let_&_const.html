@@ -18,6 +18,70 @@
     This declaration creates a contant whose scope can be either global or local to the block in which it is declared. Global Constants do not become properties of the window object, unlike var variables.An initializer for a constant is required; that is, you must specify its value in the same statement in which its declared which cannot be changed later.
 </p></strong>
 
+<h4>Example: 1</h4>
+<script>
+    var a = 10;
+    //It is created in window object property.
+    //We can reassign value in it.
+
+    let b = 20;
+    //It is not created in window oject property.
+    //We can reassingn value in it.
+
+    const c = 30;
+    //It is not created in window object property.
+    //We cannot reassign value in it.
+</script>
+<h4>Example: 2</h4>
+<script>
+    //var
+
+    function myvar(){
+        var a = 10;
+        if(true){
+            var a = 20;
+            document.write(a + "<br/>");
+        }
+        document.write(a + "<br/>");
+    }
+    myvar();
+
+    //Output:- 2020
+</script>
+<h4>Example: 3</h4>
+<script>
+    //let
+
+    function mylet(){
+        let a = 10;
+        if(true){
+            let a = 20;
+            document.write( a + "<br/>");
+        }
+        document.write( a + "<br/>");
+    }
+    mylet();
+</script>
+<h4>Example: 4</h4>
+<script>
+    //var
+
+    for(var i = 0; i<5; i++){
+        document.write(i + "<br/>");
+    }
+    document.write("<br/>" +  i + "<br/>" );
+</script>
+<h4>Example:5</h4>
+<script>
+    //let
+
+    for(let j = 0; j<5; j++){
+        document.write(j + "<br/>");
+    }
+    document.write(j + "<br/>");
+
+    //Output:- In the console: j is not defined
+</script>
 
 
 
