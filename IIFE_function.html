@@ -63,10 +63,11 @@
         //We can not access iife variable outside iife variable
         //Like:-
 
-        (function(a,b) {
-            c = +5;
-            document.write(a + b + c);
+        (function(z,y) {
+            var c = +5;
+            document.write(z + y + c);
         })(50,55);
+        document.write( z , y ,c);
         
     </script>
 
