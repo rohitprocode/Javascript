@@ -78,7 +78,25 @@
         document.write(fees.Rohit);
     </script>
 
-   
+<h3>Explaination of Method in detail</h3>
+<h4>Example:</h4>
+<script>
+    var fees = { };
+    fees.Mohan = 1500;
+    fees.total = function () { return ( 100 + 1500 )};
+
+    //call the method
+    document.write(fees.total() + "<br/>");
+
+    //You can also write this like:-
+
+    fees['total'] = function (){
+        return ( 1600 + 1500 )
+    };
+
+     //call the method
+    document.write(fees['total']());
+</script>
 
 </body>
 </html>
