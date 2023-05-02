@@ -39,5 +39,20 @@
         fees["Super Man"] = 400;
 
     </pre>
+
+    <h2>Method</h2>
+    <strong><p>When you assign function() in property then after it is called as Method.</p></strong>
+    <h4>Example: //Method</h4>
+    <pre>fees[total]=function () { return ( 100 + 200 ); };
+
+        //You can also write this like:
+       fees.total = function () { return (100 + 200);};
+       fees.total = sum;
+       function sum(){
+        return (100 + 200 + 300);
+       }
+
+    </pre>
+
 </body>
 </html>
