@@ -21,10 +21,9 @@
     <pre>
         //Square Bracket 
 
-        //You can use ' ', but it is optional in a single word.
-        fees [Rahul] = 100;
-        fees [Sumit] = 200;
-        fees [Mohan] = 300;
+        fees ['Rahul'] = 100;
+        fees ['Sumit'] = 200;
+        fees ['Mohan'] = 300;
 
         // " " is required in multiword.
         fees ["Super Man"] = 400;
@@ -35,7 +34,7 @@
         fees.Sumit = 200;
         fees.Mohan = 300;
         
-        // " " is not applicable in dot feature
+        // . is not applicable in dot feature you have to use Square Brackets
         fees["Super Man"] = 400;
 
     </pre>
@@ -51,8 +50,35 @@
        function sum(){
         return (100 + 200 + 300);
        }
-
     </pre>
+
+    <h3>Declaration of Object //Declaration and Initialization seperately</h3>
+    <h4>Example :- </h4>
+    <script>
+        //Way of Write 1:-
+
+        var fees = { };
+        fees['Rohan'] = 1000;
+        fees['Sumit'] = 2000;
+        fees['Rahul'] = 3000;
+
+        //You can display each property like:-
+
+        document.write(fees['Rohan'] + "<br/>");
+
+        // Way of Write 2:-
+
+        var fees = { };
+        fees.Rohit = 1000;
+        fees.Mohit = 2000;
+        fees.Rahul = 3000;
+
+        //You can display each property like:-
+
+        document.write(fees.Rohit);
+    </script>
+
+   
 
 </body>
 </html>
