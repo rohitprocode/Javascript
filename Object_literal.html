@@ -98,5 +98,26 @@
     document.write(fees['total']());
 </script>
 
+    <h3>Declaration of Object //Declaration and Initialization together</h3>
+    <h4>Syntax:</h4>
+<pre>var object_name = { key1 : value1, key2 : value2, key3 : value3, key_n : value_n };</pre>  
+    <h4>Example:</h4>
+    <script>
+        var fees = { 
+                    Rohan : 500,
+                    Mohan : 50,
+                    Rohit : 1500,
+
+        //If you write two words key then you should use  " ".
+                "Super Man" : 5000
+
+        }
+
+        //You can access / display this file like:
+
+        document.write(fees.Rohan + "<br/>");
+        document.write(fees["Super Man"]);
+        
+    </script>
 </body>
 </html>
