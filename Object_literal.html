@@ -117,7 +117,35 @@
 
         document.write(fees.Rohan + "<br/>");
         document.write(fees["Super Man"]);
-        
+
+    </script>
+
+    <h3>Method in Together Declare and Initialization</h3>
+    <h4>Syntax:</h4>
+    <pre>
+        var object_name = {
+                            key1 : value1,
+                            key2 : value2,
+                            key3 : value3,
+                            key4  : function () {}
+        };
+    </pre>
+    <h4>Example:</h4>
+    <script>
+        var fees = {
+                    Rahul : 500,
+                    Sumit : 600,
+                    Rohan : 900,
+                    Totall : function () {
+                        return (500 + 920);
+                    }
+        }
+
+        //call to display
+        document.write(fees.Totall() + "<br/>");
+
+        //You can also write like:-
+        document.write(fees['Totall']());
     </script>
 </body>
 </html>
