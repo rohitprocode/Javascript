@@ -25,7 +25,21 @@
         }
         document.write(fees['Total']() + "<br/>");
 
-       
+        //In this way we Declare and initialize value together in Object constructor
+
+        var commission = new Object (
+                            {
+                                Rohit : 1000,
+                                Mohit : 2000,
+                                Anshul : 3000,
+                                Total : function(){
+                                    return ( commission.Rohit + commission.Mohit + commission.Anshul);
+                                }
+
+                            }
+
+        );
+        document.write(commission.Total());
         
     </script>
     
