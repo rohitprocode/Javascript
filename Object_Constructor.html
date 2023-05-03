@@ -13,7 +13,21 @@
     <pre>
         var object_name = new Object();
     </pre>
-    
+    <h4>Example:</h4>
+    <script>
+        //In this way we First Declare object then initialize value in it; 
+        var fees = new Object();
+        fees['Rahul'] = 100;
+        fees['Sumit'] = 200;
+        fees['Rohan'] = 300;
+        fees['Total'] = function () {
+            return ( fees['Rahul'] + fees['Sumit'] + fees['Rohan']);
+        }
+        document.write(fees['Total']() + "<br/>");
+
+       
+        
+    </script>
     
 </body>
 </html>
