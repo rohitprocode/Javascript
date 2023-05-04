@@ -14,7 +14,19 @@
         delete object_name.property_name;
     or, delete object_name['property_name'];
     </pre>
-   
+    <h4>Example:</h4>
+    <script>
+        var fees = {Rohit : 4000, Mohit : 5000, Ajay : 9000 , Rahul : 12000};
+        console.log(fees);
+        delete fees.Rahul;
+        delete fees['Ajay'];
+        console.log(fees);
+
+        fees.Rohit = 10000,
+        fees.Mohit = 20000
+
+        console.log(fees);
+    </script>
 
     
 </body>
