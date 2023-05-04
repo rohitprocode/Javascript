@@ -13,7 +13,15 @@
         object_name.property_name = value;
     or, object_name['property_name'] = value;    
     </pre>
-    
+    <h4>Example:</h4>
+    <script>
+        var fees = {Rohit : 1000, Rahul : 2500, Mohit : 5000};
+        fees.Ajay = 3500;
+        fees['Manoj'] = 8000;
+        document.write(fees['Ajay'] + "<br/>" + fees.Manoj + "<br/>" );
+        document.write(fees);
+        console.log(fees);
+    </script>
     
 </body>
 </html>
