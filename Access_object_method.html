@@ -14,7 +14,13 @@
         object_name.method_name
     or, object_name['method_name']
     </pre>
-    
+    <h4>Example:</h4>
+    <script>
+        var fees = { Rohit : 1000, Mohit : 2000, Ajay : 3000, Total: function(){ return ( 100 + 200 + 300)} };
+
+        document.write(fees.Total() + "<br/>");
+        document.write(fees['Total']());
+    </script>
     
 </body>
 </html>
