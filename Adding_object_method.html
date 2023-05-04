@@ -14,7 +14,17 @@
     or, object_name['method_name'] = function () { block of statements};
     </pre>
     <h4>Example:</h4>
-   
+    <script>
+        var fees = {Rohit:1000, Mohit:3000, Ajay:5000};
+            fees.sum = function () {
+                return (fees.Rohit + fees.Mohit + fees.Ajay );
+            }
+            console.log(fees.sum);
+            document.write(fees.sum());
+            console.log(fees['sum']());
+            console.log(fees);
+            
+    </script>
     
 </body>
 </html>
