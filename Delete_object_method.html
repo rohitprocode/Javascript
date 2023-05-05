@@ -14,7 +14,19 @@
             delete object_name.method_name;
         or, delete object_name['method_name'];
     </pre>
-   
+    <h4>Example:</h4>
+    <script>
+        var fees = { Rohit : 1000, Mohit : 5000, Ajay : 6000 , Total : 
+            function () { 
+                return `${fees.Rohit * 2} <br> ${fees.Mohit * 3} <br> ${fees.Ajay /2} `;
+            }
+            };
+            delete fees.Ajay;  //delete property
+            delete fees.Total;  //delete method
+        document.write(fees.Total);   
+        console.log(fees);
+
+    </script>
     
 </body>
 </html>
