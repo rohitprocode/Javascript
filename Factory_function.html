@@ -27,7 +27,37 @@
     var object_name = function_name( //you may pass parameter value in it.);
     //You can declare and call many different objects for use of this function(Factory Function). 
 </pre>
-    
+<h4>Example:1</h4>
+<script>
+    function mobile() {
+        return {
+            Model: "Galaxy S1",
+            Price: function () {
+                return ("Price is 3100");
+            }
+        }
+    }
+    var samsung = mobile();
+    console.log(samsung.Model + " " + samsung.Price());
+    document.write(samsung.Model + " " + samsung.Price());
+</script>
+<h4>Example: 2</h4>
+<script>
+    function Smartphone(model_no, ram, battery, price) {
+        return {
+            Model: model_no,
+            RAM: ram + "GB",
+            Battery: battery,
+            Price: function(){
+                return (`Price is 31999`);
+            }
+            
+        }
+    }
+    var Realme = Smartphone("GT ME",8,4100);
+    console.log(Realme);
+    document.write(`${Realme.Model} <br/> ${Realme.RAM} <br/> ${Realme.Battery} <br/> ${Realme.Price()}`);
+</script>
 
 </body>
 
