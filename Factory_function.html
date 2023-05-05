@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Function in Javascript</title>
+</head>
+<h1>Factory Function in Javascript</h1>
+
+<body><strong>
+        <p>When a function returns an object,we call it a factory function.It can produce object instance without new
+            Keyword or classes.</p>
+    </strong>
+    <h4>Syntax: //You can create it with or without parameters.</h4>
+    <pre>
+    function function_name(parameter1,parameter2 and many more){
+        return { 
+            key1: parameter1,
+            key2: parameter2,
+            //we can write many more keys, parameter and parameter values if we need.
+            key3: function(){ block of statements };
+        }
+    }
+    //How to call it:-
+    var object_name = function_name( //you may pass parameter value in it.);
+    //You can declare and call many different objects for use of this function(Factory Function). 
+</pre>
+    
+
+</body>
+
+</html>
