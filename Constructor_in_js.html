@@ -8,6 +8,27 @@
 </head><h1>Constructor in Javascript</h1>
 <body>
     <strong><p>Object instance are created with Constructor,which are basically special function that prepare new instance of an object for use.</p></strong>
-    
+    <h4>Syntax:-</h4>
+    <pre>
+        function Constructor_name(){
+                        this.key_name = key value;
+                        this.key_name2 = key value2;
+                        //you can write more properties like this.
+                        this.method = function() {
+                            block of statements;
+                        }
+        }
+
+        //Now you can declare Constructor with object name.
+
+            var object_name = Constructor_name();
+        
+        Now, You can access the properties like:
+
+            object_name.key_name/property_name;
+        
+        or, You can access the method like:-
+            object_name.method_name();
+    </pre>
 </body>
 </html>
