@@ -30,5 +30,24 @@
         or, You can access the method like:-
             object_name.method_name();
     </pre>
+    <h4>Example:</h4>
+    <script>
+        function Grocery(){
+            this.Besan = 50;
+            this.Atta = 26;
+            this.Oilsoya = 1;
+            this.price = function (){
+                return ( 3700 + 700 + 110);
+            }
+        }
+
+        var Ajaystore = Grocery();
+        document.write(this.Besan + "<br/>");
+        document.write(this.Atta + "<br/>");
+        document.write(this.Oilsoya + "<br/>");
+        document.write(this.price() + "<br/>");
+
+
+    </script>
 </body>
 </html>
