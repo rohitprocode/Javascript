@@ -21,7 +21,7 @@
 
         //Now you can declare Constructor with object name.
 
-            var object_name = Constructor_name();
+            var object_name = new Constructor_name();
         
         Now, You can access the properties like:
 
@@ -41,13 +41,30 @@
             }
         }
 
-        var Ajaystore = Grocery();
-        document.write(this.Besan + "<br/>");
+        var Ajaystore = new Grocery();
+        document.write(Ajaystore.Besan + "<br/>");
         document.write(this.Atta + "<br/>");
         document.write(this.Oilsoya + "<br/>");
         document.write(this.price() + "<br/>");
-
-
     </script>
+    <h2>Constructor With Parameter</h2>
+    <h4>Syntax: 2</h4>
+    <pre>function function_name(parameter1,para2,para3....etc){
+                this.key_name = key value/parameter1;
+                this.key_name2 = key value/parameter2;
+                //many more like this.
+                this.method = function(){
+                            block of statements;
+                }
+        }
+        
+        var object_name = Constructor_name(); //pass value in it like: 
+        var object_name = Constructor_name(para1,para2);
+        //You can also call it like:
+        Object_name.key_name;
+        //or call method like:
+        Object_name.method();
+
+    </pre>
 </body>
 </html>
