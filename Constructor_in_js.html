@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constructor</title>
-</head><h1>Constructor in Javascript</h1>
+</head>
+<h1>Constructor in Javascript</h1>
+
 <body>
-    <strong><p>Object instance are created with Constructor,which are basically special function that prepare new instance of an object for use.</p></strong>
+    <strong>
+        <p>Object instance are created with Constructor,which are basically special function that prepare new instance
+            of an object for use.</p>
+    </strong>
     <h4>Syntax:-</h4>
     <pre>
         function Constructor_name(){
@@ -32,20 +38,20 @@
     </pre>
     <h4>Example:</h4>
     <script>
-        function Grocery(){
+        function Grocery() {
             this.Besan = 50;
             this.Atta = 26;
             this.Oilsoya = 1;
-            this.price = function (){
-                return ( 3700 + 700 + 110);
+            this.price = function () {
+                return (3700 + 700 + 110);
             }
         }
 
         var Ajaystore = new Grocery();
         document.write(Ajaystore.Besan + "<br/>");
-        document.write(this.Atta + "<br/>");
-        document.write(this.Oilsoya + "<br/>");
-        document.write(this.price() + "<br/>");
+        document.write(Ajaystore.Atta + "<br/>");
+        document.write(Ajaystore.Oilsoya + "<br/>");
+        document.write(Ajaystore.price() + "<br/>");
     </script>
     <h2>Constructor With Parameter</h2>
     <h4>Syntax: 2</h4>
@@ -64,7 +70,29 @@
         Object_name.key_name;
         //or call method like:
         Object_name.method();
+</pre>
+    <h4>Example: 2</h4>
+    <script>
+        function Mobile(model_no, Ram, Rom, Battery, cost) {
+            this.ModelNo = model_no;
+            this.RAM = Ram;
+            this.ROM = Rom;
+            this.Batterymah = Battery;
+            this.cost = function (a) {
+                return (a);
+            }
+        }
 
-    </pre>
+        var Realme = new Mobile('GTME' , '4GB', '64GB',4100 , 31000 );
+        // var Oppo = Mobile();
+        // var Iqoo = Mobile();
+        document.write(Realme.ModelNo + '<br/>');
+        document.write(Realme.RAM+ '<br/>');
+        document.write(Realme.ROM+ '<br/>');
+        document.write(Realme.cost(31000)+ '<br/>');
+        document.write(Realme.Batterymah+ '<br/>');
+    
+    </script>
 </body>
+
 </html>
