@@ -95,7 +95,29 @@
     block of statements;
 }
 </pre>
+<h4>Example:</h4>
+<script>
+        function add() {
+        this.a = 1;
+        this.b = 2;
+        this.c = 3;
+        this.d = 4;
+        this.e = 5;
+        this.f = function () {
+            return (6);
+        }
+    }
+    var Company = new add();
+    document.write(Company.a + " " + Company.b + " " + Company.c + " " + Company.d + " " + Company.e + " " + Company.f());
 
+    //Check Property Existing
+
+    if(Company.hasOwnProperty('M')){
+        document.write("Available");
+    }else {
+        document.write("Un Available");
+    }
+</script>
 </body>
 
 </html>
