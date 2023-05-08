@@ -93,6 +93,25 @@
         document.write(Realme.Batterymah+ '<br/>');
     
     </script>
+    <h4>Example: 3</h4>
+    <script>
+
+        function Smartphone(modeln, Rem,Raum,Batery){
+                this.Model = modeln;
+                this.Rem = Rem;
+                this.Raum = Raum;
+                this.Batery = Batery;
+                this.Caust = function () {
+                    return ('Price is = 20000');
+                }
+        }
+        var Reealme = new Smartphone('gt me',8+'gb',256+'gb',4300);
+        var oppo = new Smartphone(86,22,44,5000);
+        document.write(Reealme.Model + " " + Reealme.Rem + " " + Reealme.Raum + " " + Reealme.Batery + " " + Reealme.Caust() + "<br/>"  );
+        document.write(oppo.Model + " " + oppo.Rem + " " + oppo.Raum + " " + oppo.Batery + " " + oppo.Caust() + "<br/>"  );
+
+
+    </script>
 </body>
 
 </html>
