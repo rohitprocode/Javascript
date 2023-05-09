@@ -82,6 +82,68 @@
     }
     //We write special code in block of statements;
 </pre>
+<h4>Example:4</h4>
+<script>
+        function Mobile(model_no){
+            this.Model = model_no;
+            this.color = 'White';
+            this.ram = "4GB";
+            this.price = function(){
+                document.write(this.model_no + 'Price Rs. 3000' + "<br>")
+            }
+        }
 
+        var samsung = new Mobile("ORANGE 5");
+        var nokia = new Mobile('Omega');
+
+        for( var keyname in samsung){
+            if(typeof samsung[keyname] !== 'function'){
+                document.write(keyname + ": " + samsung[keyname] + "<br>");
+            }
+        }
+</script>
+<strong><p>We have one more way to iterate / display object properties:-
+    <br>
+    The Object.keys() feature returns an array of a given objects own enumerable property names.
+</p></strong>
+<h4>syntax:-</h4>
+<pre>
+    Object.keys(Object_name);   //Object's O is Capital.
+</pre>
+<h4>Example:- Get Objects Keys of an Array</h4>
+<script>
+        function Mobile(model_no){
+            this.Model = model_no;
+            this.color = 'White';
+            this.ram = "4GB";
+            this.price = function(){
+                document.write(this.model_no + 'Price Rs. 3000' + "<br>")
+            }
+        }
+
+        var samsung = new Mobile("ORANGE 5");
+        var nokia = new Mobile('Omega');
+
+        document.write(Object.keys(samsung));    //we use document.write for display it.
+        console.log(Object.keys(samsung));
+</script>
+<h4>Example:- Get Objects values of an Array</h4>
+<script>
+        function Mobile(model_no){
+            this.Model = model_no;
+            this.color = 'White';
+            this.ram = "4GB";
+            this.price = function(){
+                document.write(this.model_no + 'Price Rs. 3000' + "<br>")
+            }
+        }
+
+        var samsung = new Mobile("ORANGE 5");
+        var nokia = new Mobile('Omega');
+
+        document.write(Object.values(samsung));  //we use document.write for display it.
+        console.log(Object.values(samsung));
+</script>
+   
 </body>
 </html>
