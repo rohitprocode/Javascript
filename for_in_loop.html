@@ -52,6 +52,27 @@
         }
     }
 </pre>
+<h4>Example:-3</h4> 
+<script>
+    function Mobile(model_no){
+        this.Model = model_no;
+        this.color = 'White';
+        this.ram = "4GB";
+        this.price = function(){
+            document.write(this.model_no + 'Price Rs. 3000' + "<br>")
+        }
+    }
 
+    var samsung = new Mobile("ORANGE 5");
+    var nokia = new Mobile('Omega');
+
+    for(var keyname in samsung){
+        if(typeof samsung[keyname] !== 'function'){
+            document.write(samsung[keyname] + "<br>");
+        }
+    }
+</script>
+
+   
 </body>
 </html>
