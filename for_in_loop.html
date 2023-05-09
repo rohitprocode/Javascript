@@ -43,6 +43,15 @@
     </script>
     <p>We notice that METHOD also displayed in the output</p>
 <br>
+<strong><p>We saw in previous exmaple that function (method) also displayed in for in loop statement.So, if we want to only display object properties without method then we can write code like:-</p></strong>
+<h4>Syntax:-2</h4>
+<pre>
+    for(var variable_name in Object_name){
+        if(typeof Object_name[variable_name] !== 'function'){
+            block of statements;
+        }
+    }
+</pre>
 
 </body>
 </html>
