@@ -51,6 +51,19 @@
         var samsung = new Mobile();
         var Realme = new Mobile();
     </pre>
-    
+    <strong>When you assign a Constructor function in a variable,It is called as Class.
+    </strong>
+    <h4>Example:-</h4>
+    <script>
+        var Mobile = function(m){
+            this.Model = 'Galaxy';
+        }
+        var samsung = new Mobile();
+        var Realme = new Mobile();
+
+        document.write(samsung.Model + "<br>");
+
+        //This is a Class in Javascript
+    </script>
 </body>
 </html>
