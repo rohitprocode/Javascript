@@ -41,5 +41,28 @@
        Peroson is also a Object of <mark>Rahul, Sonam, Sujit</mark>
     </p>
     <strong>We call it class in javscript to learn and understand easily.</strong>
+    <h2>Defining a Class</h2>
+    <h4>Example:-</h4>
+    <script>
+        var Mobile = function(mode_no,sprice){
+            this.model = mode_no;
+            this.color = 'White';
+            this.price = 3000;
+            this.sp = sprice;
+            this.sellingprice = function(){
+                return(this.price + this.sp);
+            };
+            this.data = function(){
+                document.write('Model No: ' + this.model + " Price: " + this.sellingprice() + "<br>");
+            };
+        };
+
+        var samsung = new Mobile('Ultra Galaxy' , 2000);
+        var Nokia = new Mobile(2600,1500);
+
+        samsung.data();
+        Nokia.data();
+
+    </script>
 </body>
 </html>
