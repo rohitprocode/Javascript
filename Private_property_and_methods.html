@@ -8,6 +8,26 @@
 </head>
 <h1>Private Properties And Methods</h1>
 <body><strong>Using var or let or const you can create private properties</strong>
+    <h4>Example:</h4>
+    <pre>this.abc = var abc</pre>
+    <h4>Example:</h4>
+    <script>
+        var Mobile = function(model_no,sprice){
+            this.Model = model_no;
+            this.color = 'White';
+            var price = 3000;
+            this.sp = sprice;
+            var show = function(){
+                return 'Hello';
+            };
+        }
+        var samsung = new Mobile("Omega" , 2500);
+        document.write(samsung.Model + "<br>"); //Omega
+        document.write(samsung.color + "<br>"); //White
+        document.write(samsung.price + "<br>");  //undefined
+        document.write(samsung.sp + "<br>"); //2500
+        document.write(samsung.show()); //Error
+    </script>
     
 </body>
 </html>
