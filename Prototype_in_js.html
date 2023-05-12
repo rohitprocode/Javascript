@@ -10,6 +10,57 @@
 <body><strong>
     A Prototype is an existing in built functionality in javascript.Whenever we create a javascript function, javascript adds a prototype property to that function.A prototype is an object, where it can add new variables and methods to the existing object.
 </strong>
+<h4>Syntax:</h4>
+<pre>           class_name.prototype.key = 'value';
+    Example:    Mobile.prototype.color = "Green";
+</pre>
+<strong>//This property of prototype is now applied on all objects which we declared on Mobile Class or Object. <br> <br> When we check console.log we get an object,then <br>In the object we get a key <mark>'prototype'></mark>.then, <br>In the prototype we get a property which we define using prototype like:- </strong>
+<h4>Syntax:-</h4>
+<pre>         _proto_: 
+                key : "value"
+    
+    Example:-  //This is Output
+                  _proto_:
+                        color : "Green" 
 
+</pre>
+
+<strong> <h2>With the help of prototype (javascript built-in property / functionality) we write only one time and 100+ times objects using it.</h2></strong>
+
+<br>
+    <script>
+        var Mobile = function(model_no){
+            //These properties are called as Instance Members.
+            this.Model = model_no;
+            this.price = 3000;
+        }
+
+        var samsung = new Mobile('Galaxy');
+        var nokia = new Mobile(2600);
+        /*If i want to add a color property then we have teo types:-
+        samsung.color = "Red"
+        nokia.color = "Red"
+        If we have 100+ objects then we have to write it 100+ times.
+        But,
+        with the help of prototype (javascript built-in property / functionality) we write only one time and 100+ times objects using it. */
+        //There Properties and Methods are called as Prototype Members.
+        Mobile.prototype.color = "Red";
+        Mobile.prototype.Material = function(){
+            return "Plastic";
+        };
+
+        console.log(samsung);
+        console.log(nokia);
+        // Now,lets display it.
+        for(var disp in samsung){
+            document.write(disp + ": " + samsung[disp] + "<br>");
+        }
+
+        for(var disp2 in nokia){
+            document.write(disp2 + ": " + nokia[disp2] + "<br>");
+        }
+      
+    </script>
+    
 </body>
 </html>
