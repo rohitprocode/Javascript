@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterate Prototype Member</title>
+</head><h1>Iterate Instance and Prototype Member using for in loop</h1>
+<body>
+    <script>
+        var Mobile = function (model_no,price){
+            this.Model = model_no;
+            this.Price = 5150;
+        }
+
+        var samsung = new Mobile('Galaxy');
+        var Realme =    new Mobile('GT ME',32000);
+
+        for(var keyname in samsung){
+            document.write(keyname + ' : ' + samsung[keyname] + "<br>");
+        }
+        for(var keyname in Realme){
+            document.write(keyname + " : " + Realme[keyname] + "<br>");
+        }
+
+        Mobile.prototype.Made_in = "India";
+        Mobile.prototype.MRP = function(){
+            return (this.Price + 500);
+        }
+
+        for(var keyname2 in samsung){
+            if(typeof samsung[keyname2] !== 'function'){
+            document.write(keyname2 + " : " + samsung[keyname2] + "<br>");
+        
+            };
+        }
+        for(var keyname2 in Realme){
+            if(typeof Realme[keyname2] !== 'function'){
+            document.write(keyname2 + " : " + Realme[keyname2] + "<br>");
+            }
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
