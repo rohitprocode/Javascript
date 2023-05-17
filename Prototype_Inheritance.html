@@ -9,7 +9,37 @@
 <body><strong>
     Prototype inheritance in javascript is the linking of prototypes of a parent object to a child object to share and utilize the properties of a parent class using a child class.Prototypes are hidden objects that are used to share the properties and methods of a parent class to child class.
 </strong>
+<h4>Example:</h4>
+<script>
+    //Super Class
 
+    var Mobile = function(){
+        this.a = 10;
+    }
+
+    Mobile.prototype.z = 30;
+
+    //Sub class 
+    var samsung = function(){
+        Mobile.call(this);
+        this.b = 20;
+    }
+
+    //Prototype Inheritance
+
+    samsung.prototype = Object.create(Mobile.prototype);
+    samsung.prototype.constructor = samsung;
+    samsung.prototype.z=50;
+
+    var m = new Mobile();
+    var s = new samsung();
+
+    document.write(m.a + "<br>");
+    document.write(m.b + "<br>");
+    document.write(m.z + "<br>");
+    document.write(s.z + "<br>");
+
+</script>
     
 </body>
 </html>
