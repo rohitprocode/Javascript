@@ -12,7 +12,28 @@
     <br>
     <br>
     <strong>किसी दुसरे Object के method को किसी दुसरे Object से Call करके Access करने के लिए Call method का इस्तेमाल करते है|</strong>
+    <h4>Example:- Without Call Method</h4>
+    <script>
+        var Mobile = function(model){
+            this.model = model;
+        }
 
+        Mobile.prototype.getModel = function(){
+            return this.getmodel;
+        }
+
+        var Samsung = function(price){
+            this.price;
+        }
+
+        Samsung.prototype = Object.create(Mobile.prototype);
+        Samsung.prototype.constructor = Samsung;        //Reset Method
+
+        var Duos = new Samsung(3000);
+        // console.log(Duos.price);
+        console.log(Duos.getModel());       //undefined
+        console.log(Duos.model);            //Undefined
+    </script>
     
 </body>
 </html>
