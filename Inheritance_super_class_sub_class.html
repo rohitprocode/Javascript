@@ -12,7 +12,7 @@
     <strong>
         The extend keyword is used to create a child class of another class (parent).The child class inherits all the methods from another class.Inheritance is useful for code reusability.Reuse properties and methods of an existing class when you create a new class.
     </strong>
-   <h4>Example:</h4>
+   <h4>Example: with Child Parent Usual Method</h4>
     <script>
         //Super Class 
         var Mobile = function(){};
@@ -53,31 +53,50 @@
         console.log(Galaxy.getModel());
 
         var Phab = new Lenovo("Phab2" , 2700 );
-        console.log(Phab.getMethod());
+        console.log(Phab.getModel());
+</script>
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    </script>
+    <h4>Example: with Child Parent Short Method <mark> ( Reusable ) </mark></h4>
     
+    <script>
+        //Inheritance
+        function extend(child,parent){
+        child.prototype = Object.create(parent.prototype);
+        child.prototype.constructor = child;
+        }
+
+        //Super Class
+        var School = function(){};
+
+        //Prototype Method
+        School.prototype.getFees = function(){
+            return this.fee;
+        }
+
+        //Super Class
+        var Rahul = function(fee , uniform_color){
+            this.fee = fee;
+            this.color = uniform_color;
+        }
+
+        //Super Class
+        var Sachin = function(fee){
+            this.fee = fee; 
+        }
+
+       extend(Rahul,School);
+       extend(Sachin,School);
+
+       Rahul.prototype.getUniColor = function(){
+        return this.color;
+       }
+    
+       var a = new Rahul(9500,'Red');
+       console.log(a.getFees());
+       console.log(a.getUniColor());
+
+       var b = new Sachin(7540);
+       console.log(b.getFees());
+    </script>
 </body>
 </html>
