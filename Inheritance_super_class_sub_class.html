@@ -12,7 +12,72 @@
     <strong>
         The extend keyword is used to create a child class of another class (parent).The child class inherits all the methods from another class.Inheritance is useful for code reusability.Reuse properties and methods of an existing class when you create a new class.
     </strong>
-   
+   <h4>Example:</h4>
+    <script>
+        //Super Class 
+        var Mobile = function(){};
+
+        //Prototype Method
+        Mobile.prototype.getModel = function(){ 
+            return this.model; 
+        }
+
+        //Sub Class
+        var Samsung = function(model,price){
+            this.model = model;
+            this.price = price;
+        }
+
+        //Sub Class
+        var Lenovo = function(model){
+            this.model = model;
+        }
+
+        //Inheritance
+
+        //for Samsung
+        Samsung.prototype = Object.create(Mobile.prototype);
+        Samsung.prototype.constructor = Samsung;
+
+        //for Lenovo
+        Lenovo.prototype = Object.create(Mobile.prototype);
+        Lenovo.prototype.constructor = Lenovo;
+
+        //We have only one different property "price" in samsung class/constructor so we make method for that.
+        Samsung.prototype.getPrice = function(){
+            return this.price;
+        }
+
+        //Declare Objects
+        var Galaxy = new Samsung("Galaxy s1" , 3000 );
+        console.log(Galaxy.getModel());
+
+        var Phab = new Lenovo("Phab2" , 2700 );
+        console.log(Phab.getMethod());
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
     
 </body>
 </html>
