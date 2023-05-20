@@ -23,17 +23,18 @@
         }
 
         var Samsung = function(price){
-            this.price;
+            this.price = price ;
         }
 
         Samsung.prototype = Object.create(Mobile.prototype);
         Samsung.prototype.constructor = Samsung;        //Reset Method
 
         var Duos = new Samsung(3000);
-        // console.log(Duos.price);
+        console.log(Duos.price);            //3000
         console.log(Duos.getModel());       //undefined
-        console.log(Duos.model);            //Undefined
+        console.log(Duos.model);            //undefined
     </script>
+    
     
 </body>
 </html>
