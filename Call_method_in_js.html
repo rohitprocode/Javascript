@@ -33,8 +33,35 @@
         console.log(Duos.price);            //3000
         console.log(Duos.getModel());       //undefined
         console.log(Duos.model);            //undefined
+       
+        
     </script>
     
+    <h4>Example: With Call Method</h4>
+    <script>
+        var Mobiles = function(models){
+            this.models = models ;
+        }
+
+        Mobiles.prototype.getModels = function(){
+           return this.models ;
+        }
+
+        var Realme = function(models , prices){
+            Mobiles.call(this , models);
+            this.prices = prices;
+        }
+
+        Realme.prototype = Object.create(Mobiles.prototype);
+        Realme.prototype.constructor = Realme;
+
+        var GT = new Realme("GT ME" , 32000);
+        console.log(GT.getModels());    //GT ME
+        console.log(GT.prices);         //32000
+        console.log(GT.models);         //GT ME
+
+
+    </script>
     
 </body>
 </html>
