@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overriding</title>
+</head>
+
+<body>
+    <h1>Method Overriding</h1>
+    <script>
+        //Function for Inheritance
+        function extend(child, parent) {
+            child.prototype = Object.create(parent.prototype);
+            child.prototype.constructor = child;
+        }
+
+        //Mobile Super Class
+        var mobile = function () {
+        }
+
+        //Prototype Member
+        mobile.prototype.sum = function () {
+            return this.price = 5000;
+        }
+
+        //Sub Class
+        var samsung = function () {
+        }
+
+        //Call Inheritance function (Sub Class : Samsung extending Super Class : mobile)
+        extend(samsung, mobile);
+
+        //Samsung Prototype Member
+        samsung.prototype.sum = function () {
+            return this.price = 6000;
+        }
+
+        //Creating Object of Super Class mobile
+        var Lava = new mobile();
+
+        //Creating Object of Sub Class samsung
+        var Galaxy = new samsung();
+
+        //Accessing Super Class Property sum()
+        console.log(Lava.sum());
+        console.log(Galaxy.sum());
+
+    </script>
+
+</body>
+
+</html>
