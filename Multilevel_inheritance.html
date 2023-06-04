@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilevel Inheritance in Javascript</title>
+</head>
+<body>
+    <h1>Multilevel Inheritance in Javascript</h1>
+    <script>
+        //Super Class 
+        var Mobile = function(){
+            this.a = 10;
+        }
+
+        //prototype member
+        Mobile.prototype.z = 30;
+
+        //sub class
+        var Samsung = function(){
+        //It calls super class constructor and initialize property without this you can not access super class property using sub class object
+        Mobile.call(this);
+        this.b = 20;
+        }
+
+        var Galaxy = function(){
+            Samsung.call(this);
+            this.c = 100;
+        }
+
+        //prototype Inheritance
+        Samsung.prototype = Object.create(Mobile.prototype);
+        Samsung.prototype.constructor = Samsung;
+
+        Galaxy.prototype = Object.create(Samsung.prototype);
+        Galaxy.prototype.constructor = Galaxy;
+
+        var m = new Mobile();
+        var s = new Samsung();
+        var g = new Galaxy();
+
+        document.write("Galaxy Object can Access" + "<br>");
+        document.write("Mobile A: " + g.a + "<br>");
+        document.write("Samsung B: " + g.b + "<br>");
+        document.write("Mobile Prototype z: " + g.z + "<br>");
+        document.write("Galaxy C: " + g.c + "<br>");
+
+        document.write("Samsung Object can Access" + "<br>");
+        document.write("Mobile A: " + s.a + "<br>");
+        document.write("Samsung B: " + s.b + "<br>");
+        document.write("Mobile Prototype z: " + s.z + "<br>");
+        document.write("Galaxy C: " + s.c + "<br>");
+
+        document.write("Mobile can Access" + "<br>");
+        document.write("Mobile A: " + m.a + "<br>");
+        document.write("Samsung B: " + m.b + "<br>");
+        document.write("Mobile Prototype z: " + m.z + "<br>");
+        document.write("Galaxy C: " + m.c + "<br>");
+    </script>
+</body>
+</html>
