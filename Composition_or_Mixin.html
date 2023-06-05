@@ -47,7 +47,16 @@
         //Composition features of Robot
         mixin(Robot.prototype,walking,talking);
 
-       
+        var Rahul = new Human();
+        var Sonam = new Human();
+
+        var RoboCop = new Robot();
+
+        document.write(Rahul.eat());
+        document.write(Rahul.walk());
+        document.write(Rahul.talk());
+        document.write(RoboCop.walk());
+        document.write(RoboCop.talk());
     </script>
 </body>
 </html>
