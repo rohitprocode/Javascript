@@ -14,6 +14,25 @@
         function mixin(target,...sources){
             Object.assign(target,...sources);
         }
+        //Composition or Mixin
+        var eating = {
+            eat: function(){
+                return "I can eat" + "</br>";
+            }
+        };
+
+        var walking = {
+            walk: function(){
+                return "I can walk"+ "</br>";
+            }
+        };
+
+        var talking = {
+            talk: function(){
+                return "I can talk"+ "</br>";
+            }
+        };
+
       
     </script>
 </body>
