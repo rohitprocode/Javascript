@@ -41,6 +41,12 @@
         var Robot = function(){
         } 
 
+        //Composition features of Human
+        mixin(Human.prototype, eating,walking,talking);
+
+        //Composition features of Robot
+        mixin(Robot.prototype,walking,talking);
+
        
     </script>
 </body>
