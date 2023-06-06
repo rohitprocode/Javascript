@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ES6 Class in Javascript</title>
 </head>
+
 <body>
     <h1>ES6 Class in Javascript</h1>
     <strong>
@@ -13,9 +15,9 @@
     </strong>
     <p>There are Two ways to define class in Javascript using class keyword:</p>
     <strong>1. Class Declaration <br>
-            2. Class Expression
-            <br>
-            <pre>
+        2. Class Expression
+        <br>
+        <pre>
                             //Class Declaration
             
             <h2>Syntax:</h2>
@@ -30,18 +32,24 @@
     </strong>
     <h4>Example:</h4>
     <script>
-        class Mobile{
-            constructor(){
+        class Mobile {
+            constructor() {
                 this.model = "Galaxy"
             }
-            show(){
+            show() {
                 return this.model + " Price 3000";
             }
         }
 
         var nokia = new Mobile();
-        document.write(nokia.model + "<br>" );
-        document.write(nokia.show() + "<br>" );
+        document.write(nokia.model + "<br>");
+        document.write(nokia.show() + "<br>");
     </script>
+    <h2>Constructor</h2>
+    <strong>The Constructor method is a special method for creating and initializing an object created within a class.
+        There can be only one special method with the name "Constructor" in a class. <br>
+      
+    </strong>
 </body>
+
 </html>
