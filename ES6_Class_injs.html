@@ -34,7 +34,7 @@
     <script>
         class Mobile {
             constructor() {
-                this.model = "Galaxy"
+                this.model = "Galaxy";
             }
             show() {
                 return this.model + " Price 3000";
@@ -73,6 +73,28 @@
         var Realme = new SmartPhone();
         document.write(Realme.a + "<br>" );
         document.write(Realme.show1() + "<br>" );
+    </script>
+    <h4>Example:</h4>
+    <script>
+    //Class Declaration
+
+    class CellPhone{
+        constructor(){
+            this.x = 12
+            this.show2 = function(){
+                return "This is a Instance Member"
+            }
+        }    
+            //Prototype Member
+            display(){
+                return "This is a Prototype Member"
+            }
+    } 
+    //Create Object for Class
+    var IQOO = new CellPhone();
+    document.write(IQOO.x + "<br>" );
+    document.write(IQOO.show2() + "<br>");
+    document.write(IQOO.display() + "<br>");
     </script>
 </body>
 
