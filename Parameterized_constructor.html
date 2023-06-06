@@ -17,5 +17,23 @@
             Methods
         }
     </pre>
+    <h4>Example:</h4>
+    <script>
+        class Mobile{
+            constructor(model_no,color,size){
+                this.model = model_no;
+                this.color = color;
+                this.size = size;
+            }
+            show(){
+                return this.model + this.color + this.size;
+            }
+        }
+        
+        var nokia = new Mobile("1200 ", "Green ", "4.5cm" + "<br>");
+        var samsung = new Mobile('Galaxy',' Black',' 6.5cm');
+        document.write(nokia.show());
+        document.write(samsung.show());
+    </script>
 </body>
 </html>
