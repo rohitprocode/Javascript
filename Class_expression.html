@@ -16,6 +16,22 @@
         Methods;
     }
     </pre>
+    <h4>Example:</h4>
+    <script>
+        var Mobile = class{
+            constructor(model_no,color){
+                this.model = model_no;
+                this.color = color;
+            }
+        show(){
+            return this.model + " Price is 3000 " + this.color;
+        }
+        };
+
+        var Oppo = new Mobile("A45", "Grey");
+
+        document.write(Oppo.show());
+    </script>
 
 </body>
 </html>
