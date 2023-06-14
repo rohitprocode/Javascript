@@ -33,5 +33,29 @@
         document.write(Oppo.show());
     </script>
      <h4>Syntax:- //With Name</h4>
+     <pre>var variable_name = class {
+        constructor(){
+            properties/methods;
+        }
+        Methods;
+    }
+     </pre>
+
+     <h4>Example: //With Name</h4>
+     <script>
+        var Phone = class {
+            constructor(color,size){
+                this.color = color;
+                this.size = size;
+            }
+            display(){
+                return this.color + " Price is 5000 " + this.size ;
+            }
+        }
+
+        var Bsnl = new Phone('White','M');
+
+        document.write(Bsnl.display());  
+     </script>
 </body>
 </html>
