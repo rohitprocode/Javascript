@@ -8,6 +8,59 @@
 <body>
     <h1>Class Hoisting</h1>
     <h2><strong>Class Declaration and Class Expression are not be Hoisted.You first need to declare your class and then access it.</strong></h2>
+    <h4>Right Examle:</h4>
+    <pre>
+        class Mobile{
+            constructor(){
+                Properties/Methods;
+            }
+            Methods;
+        }
+
+        var nokia = new Mobile();
+    </pre>
+
+    <h4>Wrong Example:</h4>
+    <pre>
+        var nokia = new Mobile();
+
+        class Mobile {
+            constructor(){
+                Properties/Methods;
+            }
+            Methods;
+        }
+    </pre>
+
+    <script>
+
+        class Mobile{
+            constructor(){
+                this.mobile = "Galaxy";
+                this.mobile2 = "Realme";
+            }
+            show(){
+                return this.mobile + " " + this.mobile2;
+            }
+        }
+
+        var Mobile_Name = new Mobile();
+        document.write(Mobile_Name.show());
+
+        var desktop = new Device();
+
+        class Device{
+            constructor(){
+                this.version = 5.8;
+                this.color = "Red";
+            }
+            display(){
+                return this.version + " " + this.color;
+            }
+        }
+
+        document.write(desktop.display());
+    </script>
     
 </body>
 </html>
