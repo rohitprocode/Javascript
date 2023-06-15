@@ -33,5 +33,25 @@
 
     }
 </pre> 
+
+<h4>Example:-</h4>
+<script>
+    class Father {
+        constructor(){}
+        showFMoney(){
+            return "Father Money </br> ";
+        }
+    }
+
+    class Son extends Father{
+        showSMoney(){
+            return "Son Money </br> "
+        }
+    }
+
+    var M = new Son();
+    document.write(M.showFMoney());
+    document.write(M.showSMoney());
+</script>
 </body>
 </html>
