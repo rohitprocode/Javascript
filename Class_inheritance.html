@@ -53,5 +53,32 @@
     document.write(M.showFMoney());
     document.write(M.showSMoney());
 </script>
+<h4>Example with Grandson</h4>
+<script>
+    class Mother{
+        constructor(){}
+        showMMoney(){
+            return "Mother Money </br>";
+        }
+    }
+
+    class Daughter extends Mother{
+        showDMoney(){
+            return "Daughter Money </br>";
+        }
+    }
+
+    class GrandDaughter extends Daughter{
+        showGDMoney(){
+            return "Grand Daughter Money </br>";
+        }
+    }
+
+    var GG = new GrandDaughter();
+
+    document.write(GG.showMMoney());
+    document.write(GG.showDMoney());
+    document.write(GG.showGDMoney());
+</script>
 </body>
 </html>
