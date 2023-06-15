@@ -10,13 +10,28 @@
 <body>
     <h1>Super Constructor in Javascript</h1>
     <strong>The super keyword in JavaScript acts as a reference variable to the parent class. It is mainly used when we
-        want to access a variable, method, or constructor in the base class from the derived class.</strong>
+        want to access a variable, method, or constructor in the base class from the derived class.</strong><br>
     <mark>
         <strong>
             Super() is used to initialize parent class constructor.If there is a constructor present in a subclass,it needs to first call super() before using "this".A constructor can use the super keyword to call the constructor of a parent class. 
         </strong>
     </mark>
-    
+    <h4>Syntax:</h4>
+    <pre>
+        class Father_class_name{
+            constructor(parameter_name){
+                properties/methods = parameter_name;
+            }
+        }
+        class Son_class_name extends Father_class_name{
+            constructor(parameter_name){
+                super(parameter_name);
+            }
+        }
+
+        var variable_name = new Son_class_name(10000);
+    </pre>
+
 </body>
 
 </html>
