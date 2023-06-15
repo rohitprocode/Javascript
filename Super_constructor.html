@@ -32,6 +32,23 @@
         var variable_name = new Son_class_name(10000);
     </pre>
 
+    <script>
+        class Father {
+            constructor(money){
+                this.Fmoney = money;
+            }
+        }
+        class Son extends Father{
+            constructor(money){
+                super(money);
+            }
+        }
+
+        var M = new Son(15000);
+
+        document.write(M.Fmoney);
+    </script>
+
 </body>
 
 </html>
