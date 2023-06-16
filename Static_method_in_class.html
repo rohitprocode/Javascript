@@ -65,10 +65,13 @@
             }
         }
 
+        var Device = new Laptop();
         document.write("a " + Computer.Mouse + "<br>"); //Not Work
-        document.write("b " + Computer.show_name() + "<br>"); //Work
-        document.write("c " + Laptop.keyboard + "<br>"); //Not Work
-        document.write(Laptop.show_keyb_name() + "<br>") //Work
+        document.write("b " + Device.Mouse + "<br>"); //Work
+        document.write("c " + Computer.show_name() + "<br>"); //Work
+        document.write("d " + Laptop.Keyboard + "<br>"); //Not Work
+        document.write("e " + Device.Keyboard + "<br>" ); //Work
+        document.write("f " + Laptop.show_keyb_name() + "<br>") //Work.
     </script>
 </body>
 
