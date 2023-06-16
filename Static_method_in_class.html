@@ -35,8 +35,8 @@
 
     <h4>Example:-</h4>
     <script>
-        class Mobile{
-            static show(){
+        class Mobile {
+            static show() {
                 return "Static Method";
             }
         }
@@ -44,6 +44,32 @@
         document.write(Mobile.show());
     </script>
     <h4>Example:- Static not in use for constructor properties</h4>
+    <script>
+
+        class Computer {
+            constructor() {
+                this.Mouse = "Wired Mouse";
+            }
+            static show_name() {
+                return " Computer Mouse ";
+            }
+        }
+
+        class Laptop extends Computer {
+            constructor() {
+                super();
+                this.Keyboard = "In-built Keyboard";
+            }
+            static show_keyb_name() {
+                return " Keyboard of Laptop ";
+            }
+        }
+
+        document.write("a " + Computer.Mouse + "<br>"); //Not Work
+        document.write("b " + Computer.show_name() + "<br>"); //Work
+        document.write("c " + Laptop.keyboard + "<br>"); //Not Work
+        document.write(Laptop.show_keyb_name() + "<br>") //Work
+    </script>
 </body>
 
 </html>
