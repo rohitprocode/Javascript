@@ -7,6 +7,30 @@
 </head>
 <body>
     <h1>Method Overriding in Class</h1>
-    
+    <script>
+
+        class Mobile{
+            constructor(){
+                this.ROM = "256GB";
+            }
+            show(){
+                return this.ROM;
+            }
+        } 
+        class SmartPhone extends Mobile{
+            constructor(){
+                super();
+                this.RAM = "8GB";
+            }
+            show(){
+                return this.RAM;
+            }
+        }
+
+        let CellPhone = new SmartPhone();
+
+        document.write(CellPhone.show());
+
+    </script>
 </body>
 </html>
