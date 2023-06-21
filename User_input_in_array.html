@@ -17,7 +17,7 @@
         </pre>
     </strong>
 <h4>Example:-</h4>
-    <script>
+    <!-- <script>
         //Defining Array
         var elem = prompt("Enter No. of Elements:");
         var geek = [];
@@ -33,6 +33,22 @@
         }
 
         document.write(geek)
-    </script>
+    </script> -->
+<h4> Example : with for of loop </h4>
+<script>
+    //Defining Array
+    var elem1 = prompt("Enter No. of Elements");
+    var geek1 = new Array();
+    
+    //Input
+    for(let i = 0; i<=elem1; i++){
+        geek1[i] = prompt("Enter Name");
+    }
+
+    //for of loop
+    for( let value of geek1){
+        document.write(value + "</br>");
+    }
+</script>
 </body>
 </html>
