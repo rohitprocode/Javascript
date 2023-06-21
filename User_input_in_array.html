@@ -35,7 +35,7 @@
         document.write(geek)
     </script> -->
 <h4> Example : with for of loop </h4>
-<script>
+<!-- <script>
     //Defining Array
     var elem1 = prompt("Enter No. of Elements");
     var geek1 = new Array();
@@ -49,6 +49,21 @@
     for( let value of geek1){
         document.write(value + "</br>");
     }
+</script> -->
+<h4>Example: with array constructor</h4>
+<script>
+    //Defining Array
+    var geek2 = new Array(4);
+    var ln = geek2.length;
+
+    for(let i = 0; i<=ln; i++){
+        geek2[i] = prompt("Enter Name");
+    }
+
+    for(let value1 of geek2){
+        document.write(value1 + "</br>");
+    }
+
 </script>
 </body>
 </html>
