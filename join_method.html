@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Method</title>
+</head>
+<body>
+    <h1>join() method</h1>
+    <strong>
+        join() method joins the elements of an array into a string, and returns the string. <br> 
+        The elements will be separated by a specified separator.The default separator is comma (,). 
+        <h4>Syntax:</h4>
+        <pre>
+            var array_name.join(separator);
+        </pre>
+    </strong>
+    <h4>Example:</h4>
+    <script>
+        let geek = ['Rahul','Sandeep','Mukesh'];
+        let Join = geek.join("/");
+        document.write(Join + "<br>");
+        Join = geek.join(" or ");
+        document.write(Join + "<br>");
+        Join = geek.join("");
+        document.write(Join)
+
+    </script>
+</body>
+</html>
