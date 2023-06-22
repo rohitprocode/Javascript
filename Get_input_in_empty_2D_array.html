@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get input in Empty 2D Array</title>
+</head>
+<body>
+    <h1>
+        Get input from user in Empty 2D Array
+    </h1>
+    <script>
+        var geek = [];
+        var rows = prompt("Enter No of Rows");
+        var columns = prompt("Enter No of Columns");
+
+        for(let i = 0; i < rows; i++){
+            geek[i] = [];
+        }
+
+        //Input form user
+        for(let i = 0; i<rows; i++){
+            for(let j = 0; j<columns; j++){
+                geek[i][j] = prompt("Enter Name");
+            }
+            document.write("<br>");
+        }
+
+        //Display Output
+        for(let i = 0; i < rows; i++){
+            for(let j = 0; j < columns; j++){
+                document.write(geek[i][j] + " ");
+            }
+            document.write("<br>");
+        }
+
+        
+    </script>
+    
+</body>
+</html>
