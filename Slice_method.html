@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> slice() Method </title>
 </head>
+
 <body>
     <h1> slice() method </h1>
     <strong>
         <p>
-            The slice() method  returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included).The original array will not be modified.
+            The slice() method returns a shallow copy of a portion of an array into a new array object selected from
+            begin to end (end not included).The original array will not be modified.
         </p>
         <h4>Syntax:</h4>
         <pre>
@@ -17,16 +20,49 @@
         </pre>
         <h5>Start (begin_value)</h5>
         <ul>
-            <li><p>
-                If begin is undefined, slice begins from index 0.
-            </p></li>
-            <li><p>
-                If begin is greater than the length of the sequence, an empty array is returned.
-            </p></li>
-            <li><p>
-                A negative index can be used, indicating an effect from the end of the sequence.slice(-2) extracts the last two elements in the sequence.
-            </p></li>
+            <li>
+                <p>
+                    If begin is undefined, slice begins from index 0.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If begin is greater than the length of the sequence, an empty array is returned.
+                </p>
+            </li>
+            <li>
+                <p>
+                    A negative index can be used, indicating an effect from the end of the sequence.slice(-2) extracts
+                    the last two elements in the sequence.
+                </p>
+            </li>
+        </ul>
+        <h5>End (end_value)</h5>
+        <ul>
+            <li>
+                <p>
+                    The end is omitted,slice exracts through the end of the sequence (arr.length);
+                </p>
+            </li>
+            <li>
+                <p>
+                    If end is greater than the length of the sequence,slice extracts through to the end of the
+                    sequence(arr.length).
+                </p>
+            </li>
+            <li>
+                <p>
+                    A negative index can be used,indicating an effect from the end of the sequence.slice(2-1) extracts
+                    the third element through the second to last element in the sequence.
+                </p>
+            </li>
+            <li>
+                <p>
+                    slice extracts up to but not including end.
+                </p>
+            </li>
         </ul>
     </strong>
 </body>
+
 </html>
