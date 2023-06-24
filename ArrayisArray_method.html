@@ -12,5 +12,16 @@
     </strong>
     <h4>Syntax:</h4>
     <pre>Array.isArray(value);</pre>
+    <h4>Example:</h4>
+    <script>
+        let A = ["Rohit","Mohit","Suresh"];
+        let B = "Rohit , Mohit";
+        document.write(Array.isArray(A) + "<br>");
+        document.write(Array.isArray(B) + "<br>");
+        let C = Array.isArray("Rohit",454654,"Mohit");
+        let D = Array.isArray(["Rohit",486484,"Mohit"]);
+        document.write( C + "<br>");
+        document.write( D + "<br>");
+    </script>
 </body>
 </html>
