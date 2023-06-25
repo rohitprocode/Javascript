@@ -1,55 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Splice() Method</title>
 </head>
+
 <body>
     <h1> Splice() Method </h1>
     <strong>
         <p>
-            The splice() method changes the contents of an array by removing existing elements and/or adding new elements.These method changes the original array. 
+            The splice() method changes the contents of an array by removing existing elements and/or adding new
+            elements.These method changes the original array.
         </p>
         <h4>Syntax:</h4>
         <pre>
             var array_name.splice(start_value,deleteCount_value,replace_value)
         </pre>
-        <ul><li>
-            <h3>Start:-</h3>
-            <p>
-                The first argument start specifies at what position to add/remove items, use negative values to specify the position from the end of the array. 
-            </p>
-        </li>
-        <li>
-            <h3>deleteCount_value</h3>
-            <p>
-                The second argument deleteCount, is the number of elements to delete beginning with index start.
-            </p>
-        </li>
-        <li>
-            <h3>replace_value</h3>
-            <p>replace_value are inserted in place of deleted items.If more than one separate it by comma.</p>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <h3>Start:-</h3>
+                <p>
+                    The first argument start specifies at what position to add/remove items, use negative values to
+                    specify the position from the end of the array.
+                </p>
+            </li>
+            <li>
+                <h3>deleteCount_value</h3>
+                <p>
+                    The second argument deleteCount, is the number of elements to delete beginning with index start.
+                </p>
+            </li>
+            <li>
+                <h3>replace_value</h3>
+                <p>replace_value are inserted in place of deleted items.If more than one separate it by comma.</p>
+            </li>
+        </ul>
     </strong>
     <h4>Example:</h4>
     <script>
 
-        let geek0 = ["Rohit","Mohit","Ajay","Sonam","Kartik","Piyush","Dipak"];
+        let geek0 = ["Rohit", "Mohit", "Ajay", "Sonam", "Kartik", "Piyush", "Dipak"];
 
         document.write("Original Geek : " + geek0 + "</br>");
-        
+
     </script>
     <h4>Example:-</h4>
     <script>
 
-        let geek1 = ["Rohit","Mohit","Ajay","Sonam","Kartik","Piyush","Dipak"];
+        let geek1 = ["Rohit", "Mohit", "Ajay", "Sonam", "Kartik", "Piyush", "Dipak"];
 
         geek1.splice(2);
 
         document.write(" After geek.splice(2) = " + geek1 + "</br>");
-        
+
     </script>
+    <h4>Example:</h4>
+    <script>
+
+        let geek2 = ["Rohit", "Mohit", "Ajay", "Sonam", "Kartik", "Piyush", "Dipak"];
+
+        geek2.splice(2, 4);
+
+        document.write(" After geek2.splice(2.4) : " + geek2 + "</br>");
+    </script>
+    <h4>Example:</h4>
+    <script>
+        let geek3 = ["Rohit", "Mohit", "Ajay", "Sonam", "Kartik", "Piyush", "Dipak"];
+
+        geek3.splice(2, 4,"Vijay","Prakash","Aakash");
+
+        document.write(" After geek3.splice(2.4,'Vijay','Prakash','Aakash') : " + geek3 + "</br>");
+    </script>
+    
 </body>
+
 </html>
