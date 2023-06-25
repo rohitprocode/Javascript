@@ -28,7 +28,7 @@
     </ul>
     <h4>Syntax:</h4>
     <pre>
-        var variable_name = array_name.indexOf(item,start); 
+        var variable_name = array_name.<mark>indexOf(item,start);</mark>     
     </pre>
     <h4>Example:</h4>
     <pre>
@@ -42,10 +42,13 @@
     document.write(`${geek} <br>`);
     //Now make a variable
 
-    var position = geek.indexOf("Manoj",2);
+    var position = geek.indexOf("Manoj",5);
 
     document.write(position + "</br>");
 
+    var position1 = geek.indexOf("Manoj");
+
+    document.write(position1 + "</br>");
 </script>
     
 </body>
