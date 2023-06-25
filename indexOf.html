@@ -38,18 +38,26 @@
 <h4>Example:</h4>
 <script>
 
-    var geek = ["Rohit","Mohit","Aakash","Vikas","Manoj","Harish","Dipak","Vijay","Mohan","Mehta"];
+    var geek = ["Rohit","Mohit","Manoj","Aakash","Vikas","Manoj","Harish","Dipak","Vijay","Mohan","Mehta"];
     document.write(`${geek} <br>`);
     //Now make a variable
 
-    var position = geek.indexOf("Manoj",5);
+    //Search string from 5th index
+    var position = geek.indexOf("Manoj",6);
 
     document.write(position + "</br>");
 
+
+    //Search string from 0 index
     var position1 = geek.indexOf("Manoj");
 
     document.write(position1 + "</br>");
-</script>
     
+    //Only first string is taken from multiple same strings. 
+    var position2 = geek.indexOf("Manoj");
+    
+    document.write(position2 + "</br>");
+</script>
+
 </body>
 </html>
