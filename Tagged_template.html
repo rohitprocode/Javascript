@@ -17,7 +17,7 @@
     <script>
 
         var noOfTicket = 5;
-        var buyTicket = 3;
+        var buyTicket = 6;
         var eachPrice = 200;
         var dicprice = 50;
 
@@ -27,6 +27,9 @@
             if(rest[2] < 5){
                 // rest[3] = discount
                 rest[3] = 0;
+                return ` ${theory[0]} ${rest[0]} ${theory[1]} ${rest[1]} ${theory[2]} ${rest[2]} ${theory[3]} ${rest[3]} ${theory[4]}`;
+            }else if(rest[2] >= 5){
+                rest[3] = 50;
                 return ` ${theory[0]} ${rest[0]} ${theory[1]} ${rest[1]} ${theory[2]} ${rest[2]} ${theory[3]} ${rest[3]} ${theory[4]}`;
             }
         }
