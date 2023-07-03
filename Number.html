@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number</title>
 </head>
+
 <body>
     <h1>Number</h1>
     <strong>
         <p>
-            Number type in javascript includes both integar and floating point values.Javascript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard. <br>
+            Number type in javascript includes both integar and floating point values.Javascript numbers are always
+            stored as double precision floating point numbers, following the international IEEE 754 standard. <br>
             Javascript also provides an object representation of numbers.
         </p>
         <h4>Example:</h4>
@@ -37,5 +40,27 @@
             var g = new Number(5e3);
         </pre>
     </strong>
+    <h4>Example for Access</h4>
+    <script>
+        var a = 10;
+        document.write(a +"</br>"); document.write(typeof(a) + "</br>");
+        var b = 10.45;
+        document.write(b +"</br>"); document.write(typeof(b) + "</br>"); 
+        var c = 5e3;
+        document.write(c +"</br>"); document.write(typeof(c) + "</br>");
+        var d = 34e-5;
+        document.write(d +"</br>"); document.write(typeof(d) + "</br>");
+        var e = new Number(10);
+        document.write(e +"</br>"); document.write(typeof(e) + "</br>");
+        var f = new Number(10.45);
+        document.write(f +"</br>"); document.write(typeof(f) + "</br>");
+        var g = new Number(5e3);
+        document.write(g +"</br>"); document.write(typeof(g) + "</br>");
+        var h = "100";
+        document.write(h +"</br>"); document.write(typeof(h) + "</br>");
+        var i = new Number("200");
+        document.write(i +"</br>"); document.write(typeof(i) + "</br>");
+    </script>
 </body>
+
 </html>
