@@ -18,13 +18,17 @@
             let day = tarikh.getDay();
 
             document.write(getMonthName(month) + "</br>");
-            // document.write(getDayName(day) + "</br>");
+            document.write(getDayName(day) + "</br>");
 
             function getMonthName(monthnumber){
                 let monthname = ["January","February","March","April","May","June","July","August","September","October","November","December"];
                 return monthname[monthnumber];
             }
 
+            function getDayName(daynumber){
+                let dayname = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                return dayname[daynumber];
+            }
         </script>
     </strong>
 </body>
