@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format Date And Time</title>
+</head>
+<body>
+    <h1>Format Date and Time</h1>
+    <h4>Example:</h4>
+    <script>
+        let tarikh = new Date();
+        document.write( formatDate(tarikh) + "<br>");
+
+        function formatDate(pd){                        //pd is a parameter name
+            let Date = pd.getDate();
+            let Month = pd.getMonth();
+                Month++;
+            let Year = pd.getFullYear();
+            
+            return Date + "/" + Month + "/" + Year; 
+        }             
+    </script>
+</body>
+</html>
