@@ -11,7 +11,21 @@
         <p>
             If you want to get Month Name and Day Name in alphabetical format instead of number then you can write code like:
         </p>
-        
+        <h4>Example:</h4>
+        <script>
+            let tarikh = new Date();
+            let month = tarikh.getMonth();
+            let day = tarikh.getDay();
+
+            document.write(getMonthName(month) + "</br>");
+            // document.write(getDayName(day) + "</br>");
+
+            function getMonthName(monthnumber){
+                let monthname = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                return monthname[monthnumber];
+            }
+
+        </script>
     </strong>
 </body>
 </html>
