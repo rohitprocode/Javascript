@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Specific</title>
+</head>
+<body>
+    <h1>More Specific = getElementsByTagName("")</h1>
+    <p id="geek">Hello <span>Rohit</span> <em>Ra</em> <span>Hii</span></p>
+    <p id="find"><span>Bye</span>Shows</p>
+
+    <script>
+        let getSpan = document.getElementById("geek");
+        let result = document.getElementById("find");
+        let result1 = document.getElementById("geek").getElementsByTagName("*");
+        console.log(result1)
+    </script>
+</body>
+</html>
