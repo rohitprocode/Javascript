@@ -21,6 +21,17 @@
     <p>getElementsByTagName("p") <br>
         // where p is name of tag</p>
     <p>getElementsByTagName("*") <br>
-        //The parameter value "*" returns all elements in the document.</p>    
+        //The parameter value "*" returns all elements in the document.</p> 
+        
+    <script>
+        let result = document.getElementsByTagName("p");
+        console.log(result);
+
+        let result1 = document.getElementsByTagName("*");
+        console.log(result1);
+
+        let result2 = document.body.getElementsByTagName("*");
+        console.log(result2);
+    </script>
 </body>
 </html>
