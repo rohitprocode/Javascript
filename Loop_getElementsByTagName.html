@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop : getElementsByTagName("Tag_Name")</title>
+</head>
+<body>
+    <h1>Loop : getElementsByTagName</h1>
+    <p>Rohit</p>
+    <p>Rathore</p>
+    <p>Indore</p>
+    <h4>Example:</h4>
+    <pre>
+        for(let i = 0; i < data.length; i++){
+            let result = document.getElementsById("p").[i];
+            console.log(result);
+        }
+    </pre>
+
+    <script>
+        let data = document.getElementsByTagName("p");
+
+        for(let i = 0; i < data.length; i++){
+            let result = document.getElementsByTagName("p")[i];
+            console.log(result);
+        }
+    </script>
+</body>
+</html>
