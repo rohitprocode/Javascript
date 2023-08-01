@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>getElementsByClassName("Class_Name")</title>
+    <title class ="geek">getElementsByClassName("Class_Name")</title>
 </head>
 <body>
     <h1>getElementsByClassName("Class_Name")</h1>
@@ -17,5 +17,19 @@
         <p>We can also pass multiple class name. For matching, all the class name should match.</p> <br>
         <p>You can use the length property of the NodeList object to determine the number of elements with the specified class Name,then you can loop through all elements and extract the info you want.</p>
     </strong>
+    <h4>Example:</h4>
+    <h1>We are learning js</h1>
+    <h1 class="geek myclass">Subscribe</h1>
+    <h2>Now</h2>
+    <p class="geek">Hello <span>Rohit</span> <em>World</em><span> Youtube</span></p>
+    <p class="myclass"><span>Bye</span>Rohit</p>
+    <div>
+        <p>1st p inside div</p>
+        <p class="geek">2nd p inside div</p>
+    </div>
+    <script>
+        let result = document.getElementsByClassName("geek");
+        console.log(result);
+    </script>
 </body>
 </html>
