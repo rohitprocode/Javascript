@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Specific getElementsByClassName</title>
+</head>
+
+<body>
+    <h1>More Specific getElementsByClassName</h1>
+    <div id="show">
+        <p class="myclass">1st p</p>
+        <p class="geek">2nd p</p>
+        <p class="geek">3rd p</p>
+    </div>
+    <script>
+        let result1 = document.getElementById('show');
+        let result2 = result1.getElementsByClassName("geek");
+        console.log(result2);
+    </script>
+</body>
+
+</html>
