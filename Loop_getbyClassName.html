@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Property getElementsByClassName</title>
+</head>
+
+<body>
+    <h1>Loop Property getElementsByClassName</h1>
+    <div id="show">
+        <p class="myclass">1st p</p>
+        <p class="geek">2nd p</p>
+        <p class="geek">3rd p</p>
+    </div>
+    <script>
+        let len = document.getElementsByClassName('geek').length;
+        for(let i = 0; i < len; i++){
+        let result1 = document.getElementsByClassName('geek')[i];
+        console.log(result1);
+        }
+    </script>
+</body>
+
+</html>
