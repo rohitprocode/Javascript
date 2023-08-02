@@ -11,7 +11,7 @@
     <h2>Now</h2>
     <p class="geek">Hello <span>GS</span><em>World</em><span>Youtube</span></p>
     <p class="myclass"><span>Bye</span>GS</p>
-    <div class="show">
+    <div id="show">
         <p>1st</p>
         <p class="geek">2nd P</p>
     </div>
@@ -25,5 +25,10 @@
     
     let result1 = document.querySelector("p , h1");
     console.log(result1);
+    //ID selector
+    let result3 = document.querySelector("#show1");
+    console.log(result3);
+    let result4 = document.querySelector("#show, #show1");
+    console.log(result4);
 </script>
 </html>
