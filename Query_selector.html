@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="geek">Query Selector</title>
+</head>
+<body>
+    <h1>We</h1>
+    <h1 class="geek myclass">Sub</h1>
+    <h2>Now</h2>
+    <p class="geek">Hello <span>GS</span><em>World</em><span>Youtube</span></p>
+    <p class="myclass"><span>Bye</span>GS</p>
+    <div class="show">
+        <p>1st</p>
+        <p class="geek">2nd P</p>
+    </div>
+    <p id="show1">3rd P</p>
+    <p id="show1">4th</p>
+</body>
+<script>
+    //Element Selector
+    let result = document.querySelector("p");
+    console.log(result);
+</script>
+</html>
