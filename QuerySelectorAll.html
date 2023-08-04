@@ -8,7 +8,7 @@
 <body>
     <h1>QuerySelectorAll("CSS Selector")</h1>
     <strong>
-        <p>The method QuerySelectorAll() returns a static (not live) NodeList representing a list of document's elements that the specified group of selectors.</p>
+            <p>The method QuerySelectorAll() returns a static (not live) NodeList representing a list of document's elements that the specified group of selectors.</p>
         <ul>
             <li>
                 The NodeList objects represents a collection of nodes.The nodes can be accessed by index numbers.The index start at 0.
@@ -19,5 +19,14 @@
             </li>
         </ul>
     </strong>
+    <h4>We Can target Element,ID,Class and Attribute with QuerySelectorAll()</h4>
+    <h4>Example of Attribute Selector</h4>
+    <div id="show">
+        <h1>Rohit</h1>
+    </div>
+    <script>
+        let result = document.querySelectorAll("div[id]");
+        console.log(result);
+    </script>
 </body>
 </html>
