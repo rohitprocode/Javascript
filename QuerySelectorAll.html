@@ -31,5 +31,14 @@
         let result1 = document.querySelectorAll("div[id='show']");
         console.log(result1);
     </script>
+    <h4>More Specific</h4>
+    <div id="show">
+        <p>1st p inside div</p>
+        <p class="geek">2nd p <span class="myspan">inside</span><em>div</em></p>
+    </div>
+    <script>
+        let result2 = document.querySelectorAll("#show > .geek > span.myspan");
+        console.log(result2);
+    </script>
 </body>
 </html>
