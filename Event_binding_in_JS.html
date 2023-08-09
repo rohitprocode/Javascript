@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Binding in JS</title>
 </head>
+
 <body>
     <h1>Event Binding in JS</h1>
     <strong>
-        <p>When we use this approach we can add or remove handlers dynamically as well as it improves the separation between the structure of document and its logic and presentation. </p>
+        <p>When we use this approach we can add or remove handlers dynamically as well as it improves the separation
+            between the structure of document and its logic and presentation. </p>
     </strong>
     <h4>Example:</h4>
     <button id="mybtn">Click ME</button>
+    <button id="mybtn2">Click ME 2</button>
     <script>
-        document.getElementById('mybtn').onclick = function(){alert("Hii");}
+        //1
+        document.getElementById('mybtn').onclick = function () { alert("Hii"); }
+
+        //2
+        var btn = document.getElementById('mybtn2');
+        btn.onclick = function(){alert("Hii");}
     </script>
 </body>
+
 </html>
