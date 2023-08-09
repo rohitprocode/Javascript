@@ -16,6 +16,7 @@
     <h4>Example:</h4>
     <button id="mybtn">Click ME</button>
     <button id="mybtn2">Click ME 2</button>
+    <button id="mybtn3">Click Me 3</button>
     <script>
         //1
         document.getElementById('mybtn').onclick = function () { alert("Hii"); }
@@ -23,6 +24,13 @@
         //2
         var btn = document.getElementById('mybtn2');
         btn.onclick = function(){alert("Hii");}
+
+        //3
+        function disp(){
+            alert("Hii");
+        }
+
+        document.getElementById('mybtn3').onclick = disp;
     </script>
 </body>
 
