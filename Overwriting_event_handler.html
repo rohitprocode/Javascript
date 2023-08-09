@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwriting Event Handler</title>
+</head>
+<body>
+    <h1>Overwriting Event Handler</h1>
+    <strong>
+        <p>If there are two event handler at a single element then only the second or latest code is executed.</p>
+    </strong>
+    <h4>Example:</h4>
+    <button id="mybtn" >Click</button>
+    <script>
+        //This is ignored
+        function disp(){
+            alert("Hii 1");
+        }
+
+        //This is executed
+        function disp2(){
+            alert("Hii 2");
+        }
+
+        document.getElementById('mybtn').onclick = disp;
+        document.getElementById('mybtn').onclick = disp2;        
+    </script>
+</body>
+</html>
